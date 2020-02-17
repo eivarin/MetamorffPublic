@@ -1,0 +1,225 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 17rem;
+    flex-shrink: 0;
+    height: 100%;
+    width: 30%;
+    background-color: lightgreen ;
+}
+.redes{
+    order: 2;
+    flex-direction: column;
+    display: flex;
+    flex-basis:100%;
+    overflow-y: scroll;
+}
+.redes::-webkit-scrollbar{
+    display: none;
+}
+
+.rede-individual{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50px;
+}
+.uselessDiv{
+    display: block;
+    flex-grow: 2;
+    flex-basis: 100%;
+}
+@media screen{
+.mainDiv{
+    display: flex;
+    width: 100%;
+    background-color: lightcoral;
+}
+.mainDiv > .Estado{
+    flex-basis: 3rem;
+    height: 50px;
+    min-width: 50px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+.mainDiv > .Estado > div{
+    border-radius: 100px;
+    height: .9rem;
+    width: .9rem;
+    background-color: lightcyan;
+    display: block;
+    
+}
+.mainDiv > .NomeRede {
+    height: 50px;
+    flex-basis: 20rem;
+    padding-left: .2em;
+    display: grid;
+    align-items: center;  
+}
+
+.mainDiv > .opcoesbtn{
+    height: 50px;
+    min-width: 50px;
+    flex-basis: 3rem;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+.mainDiv > .opcoesbtn > button{
+    width: 1rem;
+    height: 1rem;
+    background-color: khaki;
+    border: 0;
+}
+}
+/* .Net_Options_Sub_Menu{ */
+@media screen{
+.Net_Options_Sub_Menu{
+    display: none;
+    width: 100%;
+}
+
+.Net_Options_Sub_Menu > div{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: khaki;
+}
+
+.Net_Options_Sub_Menu > div > .opcao1 {
+    flex: 1;
+    height: 100%;
+    background-color: red;
+}
+
+.Net_Options_Sub_Menu > div > .opcao2 {
+    flex: 1;
+    height: 100%;
+    background-color: green;
+}
+
+.Net_Options_Sub_Menu > div > .opcao3 {
+    flex: 1;
+    height: 100%;
+    background-color: blue;
+}
+}
+
+.logo{
+    order: 1;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 100% ;
+    height: 75px;
+    background-color: lightskyblue;
+}
+/* .IconsBtn Optionsdiv */
+@media screen {
+.icon-menu{
+    order:2; 
+    display:flex;
+    flex-basis: 7rem;
+    flex-direction: column;
+}
+.icon-btn{
+    order: 1;
+    display:block;
+    background-color: lightskyblue;
+    flex-basis: 2rem;
+    border: 0;
+    height: 2rem;
+}
+.icon-holder{
+    order: 3;
+    display: flex;
+    background-color: lightpink;
+    flex-basis: 7rem;
+    align-items: center;
+    justify-content: space-evenly; 
+}
+
+#options-div{
+    display: none;
+    background-color: lightskyblue;
+    width: 100%;
+    height: 100px;
+}
+}
+
+
+.MainPart{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: grey;
+}
+.MainPart > .upperOpDiv{
+    background-color: goldenrod;
+    height: 75px;
+    display: flex;  
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.MainPart > .FileTable{
+    width: 100%;
+    background-color: mediumturquoise;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.MainPart > .FileTable > .Headers {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.MainPart > .FileTable > .Headers > div {
+    height: 100%;
+    display: block;
+}
+.MainPart > .FileTable > .Headers > div.ChkSelecionado{
+    width: 50px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: mediumpurple;
+}
+.MainPart > .FileTable > .Headers > div.iconFicheiro{
+    width: 50px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color:purple;
+}
+.MainPart > .FileTable > .Headers > div.NomeFicheiro{
+    flex-basis: 25%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color:blueviolet;
+}
+.MainPart > .FileTable > .Headers > div.Tamanho{
+    flex-basis: 10%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color:rgb(0, 132, 255);
+}
+.MainPart > .FileTable > .Headers > div.Data{
+    
+}
+.MainPart > .FileTable > .Headers > div.Autor{
+
+}
+.MainPart > .FileTable > .Headers > div.OptionsTogller{
+
+}

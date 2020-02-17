@@ -1,0 +1,18 @@
+[
+  {
+    "IdRede": 1,
+    "NomeRede": "Rede 1",
+    "Status": 1
+  },
+  {
+    "IdRede": 2,
+    "NomeRede": "Rede 2",
+    "Status": 3
+  },
+  {
+
+    "IdRede": 3,
+    "NomeRede": "Rede 3",
+    "Status": 2
+  }
+]

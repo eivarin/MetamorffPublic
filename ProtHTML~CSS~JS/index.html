@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery3.4.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+    
+        </div>
+        <div class="redes">
+            <div class="rede-individual">
+                <div class="mainDiv">
+                    <div class="Estado">
+                        <div></div>
+                    </div>
+                    <div class="NomeRede">
+                        <p>Red1</p>
+                    </div>
+                    <div class="opcoesbtn">
+                        <button></button>
+                    </div>
+                </div>
+                <div class="Net_Options_Sub_Menu">
+                    <div>
+                        <div class="opcao1"></div>
+                        <div class="opcao2"></div>
+                        <div class="opcao3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="rede-individual">
+                <div class="mainDiv">
+                    <div class="Estado">
+                        <div></div>
+                    </div>
+                    <div class="NomeRede">
+                        <p>Red1</p>
+                    </div>
+                    <div class="opcoesbtn">
+                        <button></button>
+                    </div>
+                </div>
+                <div class="Net_Options_Sub_Menu">
+                    <div>
+                        <div class="opcao1"></div>
+                        <div class="opcao2"></div>
+                        <div class="opcao3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="icon-menu">
+            <div id="options-div">
+    
+            </div>
+            <div class="icon-holder">
+                <a class="icon-btn" onclick="MenuUpOrDown(1)">
+    
+                </a>
+                <a class="icon-btn" onclick="MenuUpOrDown(2)">
+    
+                </a>
+                <a class="icon-btn" onclick="MenuUpOrDown(3)">
+    
+                </a>
+            </div>
+        </div>
+        <script>
+
+            var MenuInteger = 0;
+            function MenuUpOrDown(myInt) {
+                if (MenuInteger == myInt) {
+                    $("#options-div").slideUp(300);
+                    MenuInteger = 0;
+                } else {
+                    $("#options-div").slideDown(300);
+                    MenuInteger = myInt;
+                }
+            }
+
+
+
+            var oldDiv = 'inicio';
+            $(document).ready(function () {
+                $(".opcoesbtn").click(function () {
+                    /*falta descobrir as classes q o old div tem*/
+                    var parentdiv = $(this).parent().parent().children(".Net_Options_Sub_Menu");
+                    var test = oldDiv[0] === parentdiv[0];
+                    if (test || oldDiv == 'inicio') {
+                        parentdiv.slideToggle(300);
+                    } else {
+                        oldDiv.slideUp(150);
+                        parentdiv.slideToggle(300);
+                    }
+                    oldDiv = parentdiv;
+                    console.log(parentdiv);
+                })
+            });
+        </script>
+    </div>
+    <div class="MainPart">
+        <div class="upperOpDiv"></div>
+        <div class="FileTable">
+            <div class="Headers">
+                <div class="ChkSelecionado"></div>
+                <div class="iconFicheiro"></div>
+                <div class="NomeFicheiro"></div>
+                <div class="TipoFicheiro"></div>
+                <div class="Tamanho"></div>
+                <div class="Data"></div>
+                <div class="Autor"></div>
+                <div class="OptionsTogller"></div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<div class="HiddenModalBox2">    
+    <div class="ModalBox">
+        <div class="UpperPart">
+            <div class="icon"></div>
+            <p class="TituloJanela">@TituloJanela</p>
+            <div class="uselessDiv"></div>
+            <div class="CloseButton" @onclick="FecharModal">
+                <div><Cancel /></div>
+            </div>
+        </div>
+    <div class="MainContent">
+        @ChildContent
+    </div>
+    <div class="BottomButtonsContainer"></div>
+    </div>
+</div>
+
+@code {
+
+    [CascadingParameter]public MainLayout MainLayout{get; set;}
+
+    private void FecharModal(){
+        MainLayout.FecharModal();
+    }
+
+    [Parameter]
+    public string TituloJanela{get;set;}
+
+    [Parameter]
+    public string TipoJanela{get;set;}
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}

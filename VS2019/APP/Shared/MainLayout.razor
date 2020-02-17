@@ -1,0 +1,54 @@
+﻿@inherits LayoutComponentBase
+<div class="tudo">
+    <div class="sidebar">
+        <CascadingValue Value="this">
+            <Sidebar />
+        </CascadingValue>
+    </div>
+
+    <div class="MainPart">
+        <div>
+            @Body
+        </div>
+    </div>
+    <div class="HiddenModalBox" style="display: @displayModal;">
+        <CascadingValue Value="this">@CustomRender</CascadingValue>
+    </div>
+</div>
+
+
+@code {
+    private string displayModal = "none";
+
+    [Inject]
+    protected IJSRuntime JsRuntime { get; set; }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+            JsRuntime.InvokeVoidAsync("onBlazorReady");
+    }
+    
+    private RenderFragment CustomRender { get; set; }
+
+    public void AbrirExampleModal(){
+        CustomRender = CreateExampleModal();
+        displayModal = "block";
+        StateHasChanged();
+    }
+
+    public void FecharModal(){
+        CustomRender = CreateEmptyModal();
+        displayModal = "none";
+        StateHasChanged();
+    }
+    private RenderFragment CreateExampleModal() => builder =>
+    {
+        builder.OpenComponent(1, typeof(ExampleModal));
+        builder.CloseComponent();
+    };
+
+    private RenderFragment CreateEmptyModal() => builder =>
+    {
+    };
+}
