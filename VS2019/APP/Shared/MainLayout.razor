@@ -1,5 +1,4 @@
-﻿@inherits LayoutComponentBase
-<div class="tudo">
+﻿<div class="tudo">
     <div class="sidebar">
         <CascadingValue Value="this">
             <Sidebar />
@@ -8,14 +7,13 @@
 
     <div class="MainPart">
         <div>
-            @Body
+            
         </div>
     </div>
     <div class="HiddenModalBox" style="display: @displayModal;">
         <CascadingValue Value="this">@CustomRender</CascadingValue>
     </div>
 </div>
-
 
 @code {
     private string displayModal = "none";

@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\RP\\METAMORFF\\VS2019\\APP\\APP.csproj": {}
+    "F:\\Projects\\METAMORFFREPO\\VS2019\\APP\\APP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\RP\\METAMORFF\\VS2019\\APP\\APP.csproj": {
+    "F:\\Projects\\METAMORFFREPO\\VS2019\\APP\\APP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\RP\\METAMORFF\\VS2019\\APP\\APP.csproj",
+        "projectUniqueName": "F:\\Projects\\METAMORFFREPO\\VS2019\\APP\\APP.csproj",
         "projectName": "APP",
-        "projectPath": "C:\\Users\\RP\\METAMORFF\\VS2019\\APP\\APP.csproj",
-        "packagesPath": "C:\\Users\\RP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\RP\\METAMORFF\\VS2019\\APP\\obj\\",
+        "projectPath": "F:\\Projects\\METAMORFFREPO\\VS2019\\APP\\APP.csproj",
+        "packagesPath": "C:\\Users\\eivar\\.nuget\\packages\\",
+        "outputPath": "F:\\Projects\\METAMORFFREPO\\VS2019\\APP\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\RP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\eivar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
