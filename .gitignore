@@ -1,0 +1,12 @@
+/VS2019/.vs/*
+/VS2019/APP/bin/*
+/VS2019/APP/obj/*
+.vscode/
+
+Site/Git-2.25.0-64-bit.exe
+
+VS2019/APP/obj/
+
+VS2019/APP/bin/
+
+VS2019/.vs/
