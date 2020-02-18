@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\RP\\METAMORFF\\VS2019\\APP\\APP.csproj",
+  "FilePath": "f:\\Projects\\METAMORFFREPO\\VS2019\\APP\\APP.csproj",
   "Configuration": {
     "ConfigurationName": "Default",
     "LanguageVersion": "3.0",
@@ -7,6 +7,266 @@
   },
   "ProjectWorkspaceState": {
     "TagHelpers": [
+      {
+        "Kind": "Components.Component",
+        "Name": "APP.Shared.MainLayout",
+        "AssemblyName": "APP",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "MainLayout",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "APP.Shared.MainLayout"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "APP.Shared.MainLayout",
+        "AssemblyName": "APP",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "APP.Shared.MainLayout",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "APP.Shared.MainLayout",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "APP.Shared.EntryDecider",
+        "AssemblyName": "APP",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "EntryDecider",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "IsEnum": false,
+            "IndexerNamePrefix": null,
+            "IndexerTypeName": null,
+            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "Body",
+              "Components.ChildContent": "True"
+            },
+            "BoundAttributeParameters": []
+          }
+        ],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "APP.Shared.EntryDecider"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "APP.Shared.EntryDecider",
+        "AssemblyName": "APP",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "APP.Shared.EntryDecider",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "IsEnum": false,
+            "IndexerNamePrefix": null,
+            "IndexerTypeName": null,
+            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "Body",
+              "Components.ChildContent": "True"
+            },
+            "BoundAttributeParameters": []
+          }
+        ],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "APP.Shared.EntryDecider",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.ChildContent",
+        "Name": "APP.Shared.EntryDecider.Body",
+        "AssemblyName": "APP",
+        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Body",
+            "ParentTag": "EntryDecider",
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "APP.Shared.EntryDecider.Body",
+          "Components.IsSpecialKind": "Components.ChildContent"
+        }
+      },
+      {
+        "Kind": "Components.ChildContent",
+        "Name": "APP.Shared.EntryDecider.Body",
+        "AssemblyName": "APP",
+        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Body",
+            "ParentTag": "APP.Shared.EntryDecider",
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "APP.Shared.EntryDecider.Body",
+          "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "APP.Shared.SurveyPrompt",
+        "AssemblyName": "APP",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "SurveyPrompt",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "IsEnum": false,
+            "IndexerNamePrefix": null,
+            "IndexerTypeName": null,
+            "Documentation": null,
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            },
+            "BoundAttributeParameters": []
+          }
+        ],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "APP.Shared.SurveyPrompt"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "APP.Shared.SurveyPrompt",
+        "AssemblyName": "APP",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "APP.Shared.SurveyPrompt",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "IsEnum": false,
+            "IndexerNamePrefix": null,
+            "IndexerTypeName": null,
+            "Documentation": null,
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            },
+            "BoundAttributeParameters": []
+          }
+        ],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "APP.Shared.SurveyPrompt",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
       {
         "Kind": "Components.Component",
         "Name": "APP.App",
@@ -303,183 +563,6 @@
       },
       {
         "Kind": "Components.Component",
-        "Name": "APP.SelfMadeComponents.Sidebar.Rede_Individual",
-        "AssemblyName": "APP",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Rede_Individual",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Rede",
-            "TypeName": "APP.Models.RedeModel",
-            "IsEnum": false,
-            "IndexerNamePrefix": null,
-            "IndexerTypeName": null,
-            "Documentation": null,
-            "Diagnostics": [],
-            "Metadata": {
-              "Common.PropertyName": "Rede"
-            },
-            "BoundAttributeParameters": []
-          }
-        ],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "APP.SelfMadeComponents.Sidebar.Rede_Individual"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "APP.SelfMadeComponents.Sidebar.Rede_Individual",
-        "AssemblyName": "APP",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "APP.SelfMadeComponents.Sidebar.Rede_Individual",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Rede",
-            "TypeName": "APP.Models.RedeModel",
-            "IsEnum": false,
-            "IndexerNamePrefix": null,
-            "IndexerTypeName": null,
-            "Documentation": null,
-            "Diagnostics": [],
-            "Metadata": {
-              "Common.PropertyName": "Rede"
-            },
-            "BoundAttributeParameters": []
-          }
-        ],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "APP.SelfMadeComponents.Sidebar.Rede_Individual",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "APP.SelfMadeComponents.Sidebar.IconMenu",
-        "AssemblyName": "APP",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "IconMenu",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "APP.SelfMadeComponents.Sidebar.IconMenu"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "APP.SelfMadeComponents.Sidebar.IconMenu",
-        "AssemblyName": "APP",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "APP.SelfMadeComponents.Sidebar.IconMenu",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "APP.SelfMadeComponents.Sidebar.IconMenu",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "APP.SelfMadeComponents.ModalBoxes.ExampleModal",
-        "AssemblyName": "APP",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ExampleModal",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "APP.SelfMadeComponents.ModalBoxes.ExampleModal"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "APP.SelfMadeComponents.ModalBoxes.ExampleModal",
-        "AssemblyName": "APP",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "APP.SelfMadeComponents.ModalBoxes.ExampleModal",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "APP.SelfMadeComponents.ModalBoxes.ExampleModal",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
         "Name": "APP.SelfMadeComponents.ModalBoxes.BaseModalBox",
         "AssemblyName": "APP",
         "Documentation": null,
@@ -668,96 +751,15 @@
       },
       {
         "Kind": "Components.Component",
-        "Name": "APP.Shared.EntryDecider",
+        "Name": "APP.SelfMadeComponents.ModalBoxes.ExampleModal",
         "AssemblyName": "APP",
         "Documentation": null,
         "TagOutputHint": null,
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "EntryDecider",
+            "TagName": "ExampleModal",
             "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Body",
-            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
-            "IsEnum": false,
-            "IndexerNamePrefix": null,
-            "IndexerTypeName": null,
-            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
-            "Diagnostics": [],
-            "Metadata": {
-              "Common.PropertyName": "Body",
-              "Components.ChildContent": "True"
-            },
-            "BoundAttributeParameters": []
-          }
-        ],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "APP.Shared.EntryDecider"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "APP.Shared.EntryDecider",
-        "AssemblyName": "APP",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "APP.Shared.EntryDecider",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Body",
-            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
-            "IsEnum": false,
-            "IndexerNamePrefix": null,
-            "IndexerTypeName": null,
-            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
-            "Diagnostics": [],
-            "Metadata": {
-              "Common.PropertyName": "Body",
-              "Components.ChildContent": "True"
-            },
-            "BoundAttributeParameters": []
-          }
-        ],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "APP.Shared.EntryDecider",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.ChildContent",
-        "Name": "APP.Shared.EntryDecider.Body",
-        "AssemblyName": "APP",
-        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Body",
-            "ParentTag": "EntryDecider",
             "TagStructure": 0,
             "Attributes": [],
             "Diagnostics": []
@@ -767,22 +769,21 @@
         "AllowedChildTags": [],
         "Diagnostics": [],
         "Metadata": {
-          "Runtime.Name": "Components.None",
-          "Common.TypeName": "APP.Shared.EntryDecider.Body",
-          "Components.IsSpecialKind": "Components.ChildContent"
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "APP.SelfMadeComponents.ModalBoxes.ExampleModal"
         }
       },
       {
-        "Kind": "Components.ChildContent",
-        "Name": "APP.Shared.EntryDecider.Body",
+        "Kind": "Components.Component",
+        "Name": "APP.SelfMadeComponents.ModalBoxes.ExampleModal",
         "AssemblyName": "APP",
-        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+        "Documentation": null,
         "TagOutputHint": null,
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Body",
-            "ParentTag": "APP.Shared.EntryDecider",
+            "TagName": "APP.SelfMadeComponents.ModalBoxes.ExampleModal",
+            "ParentTag": null,
             "TagStructure": 0,
             "Attributes": [],
             "Diagnostics": []
@@ -792,15 +793,142 @@
         "AllowedChildTags": [],
         "Diagnostics": [],
         "Metadata": {
-          "Runtime.Name": "Components.None",
-          "Common.TypeName": "APP.Shared.EntryDecider.Body",
-          "Components.IsSpecialKind": "Components.ChildContent",
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "APP.SelfMadeComponents.ModalBoxes.ExampleModal",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
       {
         "Kind": "Components.Component",
-        "Name": "APP.Shared.Sidebar",
+        "Name": "APP.SelfMadeComponents.Sidebar.IconMenu",
+        "AssemblyName": "APP",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "IconMenu",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "APP.SelfMadeComponents.Sidebar.IconMenu"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "APP.SelfMadeComponents.Sidebar.IconMenu",
+        "AssemblyName": "APP",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "APP.SelfMadeComponents.Sidebar.IconMenu",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "APP.SelfMadeComponents.Sidebar.IconMenu",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "APP.SelfMadeComponents.Sidebar.Rede_Individual",
+        "AssemblyName": "APP",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Rede_Individual",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Rede",
+            "TypeName": "APP.Models.RedeModel",
+            "IsEnum": false,
+            "IndexerNamePrefix": null,
+            "IndexerTypeName": null,
+            "Documentation": null,
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "Rede"
+            },
+            "BoundAttributeParameters": []
+          }
+        ],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "APP.SelfMadeComponents.Sidebar.Rede_Individual"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "APP.SelfMadeComponents.Sidebar.Rede_Individual",
+        "AssemblyName": "APP",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "APP.SelfMadeComponents.Sidebar.Rede_Individual",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Rede",
+            "TypeName": "APP.Models.RedeModel",
+            "IsEnum": false,
+            "IndexerNamePrefix": null,
+            "IndexerTypeName": null,
+            "Documentation": null,
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "Rede"
+            },
+            "BoundAttributeParameters": []
+          }
+        ],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "APP.SelfMadeComponents.Sidebar.Rede_Individual",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "APP.SelfMadeComponents.Sidebar.Sidebar",
         "AssemblyName": "APP",
         "Documentation": null,
         "TagOutputHint": null,
@@ -819,19 +947,19 @@
         "Diagnostics": [],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "APP.Shared.Sidebar"
+          "Common.TypeName": "APP.SelfMadeComponents.Sidebar.Sidebar"
         }
       },
       {
         "Kind": "Components.Component",
-        "Name": "APP.Shared.Sidebar",
+        "Name": "APP.SelfMadeComponents.Sidebar.Sidebar",
         "AssemblyName": "APP",
         "Documentation": null,
         "TagOutputHint": null,
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "APP.Shared.Sidebar",
+            "TagName": "APP.SelfMadeComponents.Sidebar.Sidebar",
             "ParentTag": null,
             "TagStructure": 0,
             "Attributes": [],
@@ -843,218 +971,7 @@
         "Diagnostics": [],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "APP.Shared.Sidebar",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "APP.Shared.SurveyPrompt",
-        "AssemblyName": "APP",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "SurveyPrompt",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "IsEnum": false,
-            "IndexerNamePrefix": null,
-            "IndexerTypeName": null,
-            "Documentation": null,
-            "Diagnostics": [],
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            },
-            "BoundAttributeParameters": []
-          }
-        ],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "APP.Shared.SurveyPrompt"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "APP.Shared.SurveyPrompt",
-        "AssemblyName": "APP",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "APP.Shared.SurveyPrompt",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "IsEnum": false,
-            "IndexerNamePrefix": null,
-            "IndexerTypeName": null,
-            "Documentation": null,
-            "Diagnostics": [],
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            },
-            "BoundAttributeParameters": []
-          }
-        ],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "APP.Shared.SurveyPrompt",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "APP.Shared.MainLayout",
-        "AssemblyName": "APP",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "MainLayout",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Body",
-            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
-            "IsEnum": false,
-            "IndexerNamePrefix": null,
-            "IndexerTypeName": null,
-            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
-            "Diagnostics": [],
-            "Metadata": {
-              "Common.PropertyName": "Body",
-              "Components.ChildContent": "True"
-            },
-            "BoundAttributeParameters": []
-          }
-        ],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "APP.Shared.MainLayout"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "APP.Shared.MainLayout",
-        "AssemblyName": "APP",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "APP.Shared.MainLayout",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Body",
-            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
-            "IsEnum": false,
-            "IndexerNamePrefix": null,
-            "IndexerTypeName": null,
-            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
-            "Diagnostics": [],
-            "Metadata": {
-              "Common.PropertyName": "Body",
-              "Components.ChildContent": "True"
-            },
-            "BoundAttributeParameters": []
-          }
-        ],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "APP.Shared.MainLayout",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.ChildContent",
-        "Name": "APP.Shared.MainLayout.Body",
-        "AssemblyName": "APP",
-        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Body",
-            "ParentTag": "MainLayout",
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.None",
-          "Common.TypeName": "APP.Shared.MainLayout.Body",
-          "Components.IsSpecialKind": "Components.ChildContent"
-        }
-      },
-      {
-        "Kind": "Components.ChildContent",
-        "Name": "APP.Shared.MainLayout.Body",
-        "AssemblyName": "APP",
-        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Body",
-            "ParentTag": "APP.Shared.MainLayout",
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.None",
-          "Common.TypeName": "APP.Shared.MainLayout.Body",
-          "Components.IsSpecialKind": "Components.ChildContent",
+          "Common.TypeName": "APP.SelfMadeComponents.Sidebar.Sidebar",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -17873,78 +17790,78 @@
   "RootNamespace": "APP",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\RP\\METAMORFF\\VS2019\\APP\\Shared\\EntryDecider.razor",
-      "TargetPath": "Shared\\EntryDecider.razor",
+      "FilePath": "f:\\Projects\\METAMORFFREPO\\VS2019\\APP\\SelfMadeComponents\\Sidebar\\Sidebar.razor",
+      "TargetPath": "SelfMadeComponents\\Sidebar\\Sidebar.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\RP\\METAMORFF\\VS2019\\APP\\SelfMadeComponents\\ModalBoxes\\ExampleModal.razor",
-      "TargetPath": "SelfMadeComponents\\ModalBoxes\\ExampleModal.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\RP\\METAMORFF\\VS2019\\APP\\Pages\\Index.razor",
+      "FilePath": "f:\\Projects\\METAMORFFREPO\\VS2019\\APP\\Pages\\Index.razor",
       "TargetPath": "Pages\\Index.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\RP\\METAMORFF\\VS2019\\APP\\Pages\\Counter.razor",
-      "TargetPath": "Pages\\Counter.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\RP\\METAMORFF\\VS2019\\APP\\SelfMadeComponents\\Sidebar\\IconMenu.razor",
+      "FilePath": "f:\\Projects\\METAMORFFREPO\\VS2019\\APP\\SelfMadeComponents\\Sidebar\\IconMenu.razor",
       "TargetPath": "SelfMadeComponents\\Sidebar\\IconMenu.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\RP\\METAMORFF\\VS2019\\APP\\Shared\\Sidebar.razor",
-      "TargetPath": "Shared\\Sidebar.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\RP\\METAMORFF\\VS2019\\APP\\App.razor",
-      "TargetPath": "App.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\RP\\METAMORFF\\VS2019\\APP\\Pages\\FetchData.razor",
-      "TargetPath": "Pages\\FetchData.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\RP\\METAMORFF\\VS2019\\APP\\_Imports.razor",
-      "TargetPath": "_Imports.razor",
-      "FileKind": "componentImport"
-    },
-    {
-      "FilePath": "c:\\Users\\RP\\METAMORFF\\VS2019\\APP\\SelfMadeComponents\\icons\\TogllingArrow.razor",
-      "TargetPath": "SelfMadeComponents\\icons\\TogllingArrow.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\RP\\METAMORFF\\VS2019\\APP\\Shared\\MainLayout.razor",
-      "TargetPath": "Shared\\MainLayout.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\RP\\METAMORFF\\VS2019\\APP\\SelfMadeComponents\\ModalBoxes\\BaseModalBox.razor",
-      "TargetPath": "SelfMadeComponents\\ModalBoxes\\BaseModalBox.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\RP\\METAMORFF\\VS2019\\APP\\SelfMadeComponents\\icons\\Cancel.razor",
-      "TargetPath": "SelfMadeComponents\\icons\\Cancel.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\RP\\METAMORFF\\VS2019\\APP\\Shared\\SurveyPrompt.razor",
+      "FilePath": "f:\\Projects\\METAMORFFREPO\\VS2019\\APP\\Shared\\SurveyPrompt.razor",
       "TargetPath": "Shared\\SurveyPrompt.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\RP\\METAMORFF\\VS2019\\APP\\SelfMadeComponents\\Sidebar\\Rede-Individual.razor",
+      "FilePath": "f:\\Projects\\METAMORFFREPO\\VS2019\\APP\\SelfMadeComponents\\ModalBoxes\\ExampleModal.razor",
+      "TargetPath": "SelfMadeComponents\\ModalBoxes\\ExampleModal.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "f:\\Projects\\METAMORFFREPO\\VS2019\\APP\\App.razor",
+      "TargetPath": "App.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "f:\\Projects\\METAMORFFREPO\\VS2019\\APP\\Pages\\FetchData.razor",
+      "TargetPath": "Pages\\FetchData.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "f:\\Projects\\METAMORFFREPO\\VS2019\\APP\\Shared\\MainLayout.razor",
+      "TargetPath": "Shared\\MainLayout.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "f:\\Projects\\METAMORFFREPO\\VS2019\\APP\\SelfMadeComponents\\ModalBoxes\\BaseModalBox.razor",
+      "TargetPath": "SelfMadeComponents\\ModalBoxes\\BaseModalBox.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "f:\\Projects\\METAMORFFREPO\\VS2019\\APP\\SelfMadeComponents\\icons\\TogllingArrow.razor",
+      "TargetPath": "SelfMadeComponents\\icons\\TogllingArrow.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "f:\\Projects\\METAMORFFREPO\\VS2019\\APP\\SelfMadeComponents\\icons\\Cancel.razor",
+      "TargetPath": "SelfMadeComponents\\icons\\Cancel.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "f:\\Projects\\METAMORFFREPO\\VS2019\\APP\\Shared\\EntryDecider.razor",
+      "TargetPath": "Shared\\EntryDecider.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "f:\\Projects\\METAMORFFREPO\\VS2019\\APP\\_Imports.razor",
+      "TargetPath": "_Imports.razor",
+      "FileKind": "componentImport"
+    },
+    {
+      "FilePath": "f:\\Projects\\METAMORFFREPO\\VS2019\\APP\\SelfMadeComponents\\Sidebar\\Rede-Individual.razor",
       "TargetPath": "SelfMadeComponents\\Sidebar\\Rede-Individual.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "f:\\Projects\\METAMORFFREPO\\VS2019\\APP\\Pages\\Counter.razor",
+      "TargetPath": "Pages\\Counter.razor",
       "FileKind": "component"
     }
   ],
