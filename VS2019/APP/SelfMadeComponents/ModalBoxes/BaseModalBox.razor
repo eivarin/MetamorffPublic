@@ -8,15 +8,21 @@
                 <div><Cancel /></div>
             </div>
         </div>
-    <div class="MainContent">
-        @ChildContent
-    </div>
-    <div class="BottomButtonsContainer"></div>
+        <div class="MainContent">
+            @ChildContent
+        </div>
+        <div class="BottomButtonsContainer">
+            <ModalBoxButton QndClicar="FecharModal">
+                <p>Cancelar</p>
+            </ModalBoxButton>
+            <ModalBoxButton QndClicar="FecharModal">
+                <p>Guardar</p>
+            </ModalBoxButton>
+        </div>
     </div>
 </div>
 
 @code {
-
     [CascadingParameter]public MainLayout MainLayout{get; set;}
 
     private void FecharModal(){

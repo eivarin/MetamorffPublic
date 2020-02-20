@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Titillium Web;
     width: 100%;
     height: 100vh;
 }
@@ -59,6 +59,9 @@ app{
 .rede-individual:hover > .HoverDiv{
     clip-path: inset(0% 0% 0% 0%);
 } 
+.rede-individual:hover > .mainDiv >.NomeRede{
+    font-weight: 500;
+} 
 .uselessDiv{
     display: block;
     flex-grow: 2;
@@ -94,6 +97,8 @@ app{
     padding-left: .2em;
     z-index: 20;
     display: grid;
+    font-size: 1.05rem;
+    font-weight: 400;
     align-items: center;  
 }
 
@@ -305,7 +310,7 @@ app{
 .HiddenModalBox{
     z-index: 25;
     position: absolute;
-    display: hidden;
+    display: none;
     width: 100%;
     height: 100%;
 }
@@ -396,6 +401,7 @@ app{
         .ModalBox > .MainContent{
             width: 100%;
             height: 500px;
+            padding: .5rem;
             background-color: turquoise;
         }
 
@@ -406,7 +412,27 @@ app{
         .ModalBox > .BottomButtonsContainer{
             width: 100%;
             height: 50px;
-            background-color: violet;
+            background-color: #f5f6fa;
+            display:flex;
+            border-top: 1px solid black;
+            flex-direction: row-reverse;
+        }
+        .ModalBox > .BottomButtonsContainer > .button{
+            width: 20%;
+            height: 100%;
+            border-left: 1px black solid;
+            display: block;
+            transition: background-color .2s linear;
+        }
+        .ModalBox > .BottomButtonsContainer > .button:hover{
+            background-color: #dcdde1;
+        }
+        .ModalBox > .BottomButtonsContainer > .button > div{
+            width:100%;
+            height: 100%;
+            display: grid;
+            justify-items: center;
+            align-items: center;
         }
 
     }
