@@ -16,243 +16,248 @@ app{
     height: 100%;
 }
 
-/**SIDEBAR*/
+/** Reseting the styles */
+@media screen{
+    p{
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+}
+
+/** SIDEBAR */
 @media screen{
     .sidebar{
-    display: flex;
-    flex-direction: column;
-    width: 17rem;
-    flex-shrink: 0;
-    flex-grow: 0;
-    height: 100%;
-    width: 17rem;
-    background-color: lightgreen ;
-}
-.redes{
-    order: 2;
-    flex-direction: column;
-    display: flex;
-    z-index: 14;
-    flex-basis:100%;
-    overflow-y: scroll;
-}
-.redes::-webkit-scrollbar{
-    display: none;
-}
-
-
-/**Rede Individual*/
-@media screen{
-.rede-individual{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    flex-basis: 50px;
-    background-color: lightcoral;
-}
-
-.rede-individual > .mainDiv > .HoverDiv {
-    flex-basis: 20rem;
-    height: 50px;   
-    position: relative;
-    display: flex;
-    overflow: hidden;
-}
-.rede-individual > .mainDiv > .HoverDiv:before {
-  box-sizing: border-box;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: hsla(0, 0%, 100%, 0.267);
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-}
-
-.rede-individual:hover > .mainDiv > .HoverDiv:before{
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-} 
-.rede-individual:hover > .mainDiv > .HoverDiv >.NomeRede{
-    font-weight: 500;
-} 
-.uselessDiv{
-    display: block;
-    flex-grow: 2;
-    flex-basis: 100%;
-}
-
-.mainDiv{
-    display: flex;
-    width: 100%;
-    z-index: 10;
-}
-
-.mainDiv > .HoverDiv > .Estado{
-    flex-basis: 3rem;
-    height: 50px;
-    min-width: 50px;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    z-index: 20;
-}
-.mainDiv > .HoverDiv > .Estado > div{
-    border-radius: 100px;
-    height: .9rem;
-    width: .9rem;
-    z-index: 21;
-    display: block;
-}
-.mainDiv > .HoverDiv > .NomeRede {
-    height: 50px;
-    flex-basis: 20rem;
-    padding-left: .2em;
-    z-index: 20;
-    display: grid;
-    font-size: 1.05rem;
-    font-weight: 400;
-    align-items: center;  
-}
-
-.mainDiv > .opcoesbtn{
-    height: 50px;
-    min-width: 50px;
-    flex-basis: 3rem;
-    display: grid;
-    z-index: 20;
-    align-items: center;
-    justify-items: center;
-    background-color: transparent;
-    transition: background-color .5s ease;
-}
-.mainDiv > .opcoesbtn:hover{
-    background-color: hsla(0, 0%, 100%, 0.267);
-    cursor: pointer;
-}
-.mainDiv > .opcoesbtn > button{
-    width: 1rem;
-    height: 1rem;
-    z-index: 21;
-    display:block;
-    background-color: transparent;
-    padding:0;
-    border: 0;
-}
-.mainDiv > .opcoesbtn > button > svg{
-    width :100%;
-    height:100%;
-    transition: transform .25s ease-in; 
-}
-}
-/** .Net_Options_Sub_Menu{ */
-@media screen{
-.Net_Options_Sub_Menu{
-    display: none;
-    width: 100%;
-}
-
-.Net_Options_Sub_Menu > div{
-    display: flex;
-    width: 100%;
-    height: 50px;
-    background-color: khaki;
-}
-
-.Net_Options_Sub_Menu > div > .opcao1 {
-    flex: 1;
-    height: 100%;
-    background-color: red;
-}
-
-.Net_Options_Sub_Menu > div > .opcao2 {
-    flex: 1;
-    height: 100%;
-    background-color: green;
-}
-
-.Net_Options_Sub_Menu > div > .opcao3 {
-    flex: 1;
-    height: 100%;
-    background-color: blue;
-}
-}
-
-.logo{
-    order: 1;
-    flex-grow: 0;
-    flex-shrink: 0;
-    width: 100% ;
-    height: 75px;
-    background-color: lightskyblue;
-}
-/** .IconsBtn Optionsdiv */
-@media screen {
-    .icon-menu{
-        order:2; 
-        display:flex;
-        flex-basis: 7rem;
+        display: flex;
         flex-direction: column;
-    }
-    .icon-btn{
-        order: 1;
-        display:block;
-        background-color: lightskyblue;
-        flex-basis: 2rem;
-        border: 0;
-        height: 2rem;
-    }
-    .icon-holder{
-        order: 3;
-        display: flex;
-        background-color: lightpink;
-        flex-basis: 7rem;
-        align-items: center;
-        justify-content: space-evenly; 
-    }
-
-    #options-div{
-        display: none;
-        background-color: lightskyblue;
-        width: 100%;
-        height: 100px;
-    }
-    #options-div > div{
-        display: flex;
-        overflow-x: scroll;
-        background-color: lightskyblue;
-        width: 100%;
-        height: 100%;
-        -webkit-overflow-scrolling: touch;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-    }
-    #options-div > div::-webkit-scrollbar{
-        display: none;
-    }
-    #options-div > div > .bloco{
+        width: 17rem;
         flex-shrink: 0;
-        width: 100%;
+        flex-grow: 0;
         height: 100%;
-        scroll-snap-align: start;
+        width: 17rem;
+        background-color: lightgreen ;
     }
-    #options-div > div > #bloco1{
+    .logo{
+        order: 1;
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: 100% ;
+        height: 75px;
         background-color: lightskyblue;
     }
-    #options-div > div > #bloco2{
-        background-color: green;
+    .redes{
+        order: 2;
+        flex-direction: column;
+        display: flex;
+        z-index: 14;
+        flex-basis:100%;
+        overflow-y: scroll;
     }
-    #options-div > div > #bloco3{
-        background-color: red;
+    .redes::-webkit-scrollbar{
+        display: none;
     }
-}
+    /** Rede Individual */
+    @media screen{
+        .rede-individual{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            flex-basis: 50px;
+            background-color: lightcoral;
+        }
+        /** MainDiv */
+        @media screen {
+            .rede-individual > .mainDiv > .HoverDiv {
+                flex-basis: 20rem;
+                height: 50px;   
+                position: relative;
+                display: flex;
+                overflow: hidden;
+            }
+            .rede-individual > .mainDiv > .HoverDiv:before {
+                box-sizing: border-box;
+                -webkit-transition: 0.5s ease-in-out;
+                transition: 0.5s ease-in-out;
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: hsla(0, 0%, 100%, 0.267);
+                -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+            }
+            .rede-individual:hover > .mainDiv > .HoverDiv:before{
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            } 
+            .rede-individual:hover > .mainDiv > .HoverDiv >.NomeRede{
+                font-weight: 500;
+            } 
+            .uselessDiv{
+                display: block;
+                flex-grow: 2;
+                flex-basis: 100%;
+            }
+            .mainDiv{
+                display: flex;
+                width: 100%;
+                z-index: 10;
+            }
+            .mainDiv > .HoverDiv > .Estado{
+                flex-basis: 3rem;
+                height: 50px;
+                min-width: 50px;
+                display: grid;
+                align-items: center;
+                justify-items: center;
+                z-index: 20;
+            }
+            .mainDiv > .HoverDiv > .Estado > div{
+                border-radius: 100px;
+                height: .9rem;
+                width: .9rem;
+                z-index: 21;
+                display: block;
+            }
+            .mainDiv > .HoverDiv > .NomeRede {
+                height: 50px;
+                flex-basis: 20rem;
+                padding-left: .2em;
+                z-index: 20;
+                display: grid;
+                font-size: 1.05rem;
+                font-weight: 400;
+                align-items: center;  
+            }
+            .mainDiv > .opcoesbtn{
+                height: 50px;
+                min-width: 50px;
+                flex-basis: 3rem;
+                display: grid;
+                z-index: 20;
+                align-items: center;
+                justify-items: center;
+                background-color: transparent;
+                transition: background-color .5s ease;
+            }
+            .mainDiv > .opcoesbtn:hover{
+                background-color: hsla(0, 0%, 100%, 0.267);
+                cursor: pointer;
+            }
+            .mainDiv > .opcoesbtn > button{
+                width: 1rem;
+                height: 1rem;
+                z-index: 21;
+                display:block;
+                background-color: transparent;
+                padding:0;
+                border: 0;
+            }
+            .mainDiv > .opcoesbtn > button > svg{
+                width :100%;
+                height:100%;
+                transition: transform .25s ease-in; 
+            }
+        }
+        /** .Net_Options_Sub_Menu */
+        @media screen{
+            .Net_Options_Sub_Menu{
+                display: none;
+                width: 100%;
+            }
+
+            .Net_Options_Sub_Menu > div{
+                display: flex;
+                width: 100%;
+                height: 50px;
+                background-color: khaki;
+            }
+
+            .Net_Options_Sub_Menu > div > .opcao1 {
+                flex: 1;
+                height: 100%;
+                background-color: red;
+            }
+
+            .Net_Options_Sub_Menu > div > .opcao2 {
+                flex: 1;
+                height: 100%;
+                background-color: green;
+            }
+
+            .Net_Options_Sub_Menu > div > .opcao3 {
+                flex: 1;
+                height: 100%;
+                background-color: blue;
+            }
+        }
+    }
+    /** .IconsBtn Optionsdiv */
+    @media screen {
+        .icon-menu{
+            order:2; 
+            display:flex;
+            flex-basis: 7rem;
+            flex-direction: column;
+        }
+        .icon-btn{
+            order: 1;
+            display:block;
+            background-color: lightskyblue;
+            flex-basis: 2rem;
+            border: 0;
+            height: 2rem;
+        }
+        .icon-holder{
+            order: 3;
+            display: flex;
+            background-color: lightpink;
+            flex-basis: 7rem;
+            align-items: center;
+            justify-content: space-evenly; 
+        }
+        /** Hidden Options-div */
+        @media screen {
+            #options-div{
+                display: none;
+                background-color: lightskyblue;
+                width: 100%;
+                height: 100px;
+            }
+            #options-div > div{
+                display: flex;
+                overflow-x: scroll;
+                background-color: lightskyblue;
+                width: 100%;
+                height: 100%;
+                -webkit-overflow-scrolling: touch;
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+            }
+            #options-div > div::-webkit-scrollbar{
+                display: none;
+            }
+            #options-div > div > .bloco{
+                flex-shrink: 0;
+                width: 100%;
+                height: 100%;
+                scroll-snap-align: start;
+            }
+            #options-div > div > #bloco1{
+                background-color: lightskyblue;
+            }
+            #options-div > div > #bloco2{
+                background-color: green;
+            }
+            #options-div > div > #bloco3{
+                background-color: red;
+            }
+        }
+    }
 }
 
-/** .MainPart e childs*/
+/** .MainPart e childs */
 @media screen{
 .MainPart{
     display: flex;
@@ -324,35 +329,34 @@ app{
 
 /** .Hidden Modal Box */
 @media screen{
-.HiddenModalBox{
-    z-index: 25;
-    position: absolute;
-    display: none;
-    width: 100%;
-    height: 100%;
-}
-.HiddenModalBox2 {
-    position: absolute;
-    z-index: 1000000;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.295);
-    display: grid;
-    align-items: center;
-    justify-items: center;
-}
-.ModalBox{
-    z-index: 100001;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(255, 255, 255);
-    width: 800px;
-    height: 600px;
-}
+    .HiddenModalBox{
+        z-index: 25;
+        position: absolute;
+        display: none;
+        width: 100%;
+        height: 100%;
+    }
+    .HiddenModalBox2 {
+        position: absolute;
+        z-index: 1000000;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.295);
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
+    .ModalBox{
+        z-index: 100001;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(255, 255, 255);
+        width: 800px;
+        height: 600px;
+    }
     /** Header da Modal Box */
     @media screen {
-        
         .ModalBox > .UpperPart{
             display: flex;
             width: 100%;
@@ -386,7 +390,10 @@ app{
         }
         .ModalBox > .UpperPart > .TituloJanela{
             height: 100%;
-            
+            display: grid;
+            padding-left: 1rem;
+            align-items: center;
+            justify-items: center;
         }
         .ModalBox > .UpperPart > .CloseButton{
             display: block;
@@ -413,7 +420,7 @@ app{
         }
     }
 
-    /** MainPart da ModalBox*/
+    /** MainPart da ModalBox */
     @media screen {
         .ModalBox > .MainContent{
             width: 100%;
@@ -421,10 +428,8 @@ app{
             padding: .5rem;
             background-color: turquoise;
         }
-
     }
-
-    /** Parte de Baixo da ModalBox*/
+    /** Parte de Baixo da ModalBox */
     @media screen {
         .ModalBox > .BottomButtonsContainer{
             width: 100%;
