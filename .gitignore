@@ -24,3 +24,7 @@ src/WebWindow.Blazor.JS/obj/
 src/Metamorff/MonoTorrent/obj/
 
 src/Metamorff/MonoTorrent/bin/
+
+src/MonoTorrent/MonoTorrent/obj/
+
+src/MonoTorrent/MonoTorrent/bin/
