@@ -22,64 +22,79 @@ namespace WebWindows.Blazor
         internal static DesktopJSRuntime DesktopJSRuntime { get; private set; }
         internal static DesktopRenderer DesktopRenderer { get; private set; }
         internal static WebWindow WebWindow { get; private set; }
+        private static bool singleInstanceOpen = true;
+        [DllImport("user32.dll")]
+        static extern bool SetForegroundWindow(IntPtr hWnd);
 
         public static void Run<TStartup>(string windowTitle, string hostHtmlPath)
         {
-            DesktopSynchronizationContext.UnhandledException += (sender, exception) =>
+            //mycode
+            if (singleInstanceOpen)
             {
-                UnhandledException(exception);
-            };
-
-            WebWindow = new WebWindow(windowTitle, options =>
-            {
-                var contentRootAbsolute = Path.GetDirectoryName(Path.GetFullPath(hostHtmlPath));
-
-                options.SchemeHandlers.Add(BlazorAppScheme, (string url, out string contentType) =>
+                singleInstanceOpen = false;
+                //end of my code
+                DesktopSynchronizationContext.UnhandledException += (sender, exception) =>
                 {
+                    UnhandledException(exception);
+                };
+
+                WebWindow = new WebWindow(windowTitle, options =>
+                {
+                    var contentRootAbsolute = Path.GetDirectoryName(Path.GetFullPath(hostHtmlPath));
+
+                    options.SchemeHandlers.Add(BlazorAppScheme, (string url, out string contentType) =>
+                    {
                     // TODO: Only intercept for the hostname 'app' and passthrough for others
                     // TODO: Prevent directory traversal?
                     var appFile = Path.Combine(contentRootAbsolute, new Uri(url).AbsolutePath.Substring(1));
-                    if (appFile == contentRootAbsolute)
-                    {
-                        appFile = hostHtmlPath;
-                    }
+                        if (appFile == contentRootAbsolute)
+                        {
+                            appFile = hostHtmlPath;
+                        }
 
-                    contentType = GetContentType(appFile);
-                    return File.Exists(appFile) ? File.OpenRead(appFile) : null;
-                });
+                        contentType = GetContentType(appFile);
+                        return File.Exists(appFile) ? File.OpenRead(appFile) : null;
+                    });
 
                 // framework:// is resolved as embedded resources
                 options.SchemeHandlers.Add("framework", (string url, out string contentType) =>
-                {
-                    contentType = GetContentType(url);
-                    return SupplyFrameworkFile(url);
+                    {
+                        contentType = GetContentType(url);
+                        return SupplyFrameworkFile(url);
+                    });
                 });
-            });
 
-            CancellationTokenSource appLifetimeCts = new CancellationTokenSource();
-            Task.Factory.StartNew(async () =>
-            {
+                CancellationTokenSource appLifetimeCts = new CancellationTokenSource();
+                Task.Factory.StartNew(async () =>
+                {
+                    try
+                    {
+                        var ipc = new IPC(WebWindow);
+                        await RunAsync<TStartup>(ipc, appLifetimeCts.Token, MSC);
+                    }
+                    catch (Exception ex)
+                    {
+                        UnhandledException(ex);
+                        throw;
+                    }
+                });
                 try
                 {
-                    var ipc = new IPC(WebWindow);
-                    await RunAsync<TStartup>(ipc, appLifetimeCts.Token);
-                }
-                catch (Exception ex)
-                {
-                    UnhandledException(ex);
-                    throw;
-                }
-            });
-
-            try
-            {
                     WebWindow.SetIconFile("logo.ico");
-                WebWindow.NavigateToUrl(BlazorAppScheme + "://app/");
-                WebWindow.WaitForExit();
+                    WebWindow.NavigateToUrl(BlazorAppScheme + "://app/");
+                    WebWindow.WaitForExit();
+                    
+                }
+                finally
+                {
+                    appLifetimeCts.Cancel();
+                    singleInstanceOpen = true;
+                }
             }
-            finally
+            else
             {
-                appLifetimeCts.Cancel();
+                Process process = Process.GetCurrentProcess();
+                SetForegroundWindow(WebWindow.Hwnd);
             }
         }
 
@@ -174,7 +189,7 @@ namespace WebWindows.Blazor
                 InitialUriAbsolute = ((JsonElement)argsArray[0]).GetString();
                 BaseUriAbsolute = ((JsonElement)argsArray[1]).GetString();
 
-                tcs.SetResult(null);
+                 tcs.SetResult(null);
             });
 
             await tcs.Task;
