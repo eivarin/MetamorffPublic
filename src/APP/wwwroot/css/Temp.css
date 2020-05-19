@@ -1,0 +1,752 @@
+
+/** Reseting the styles */
+p{
+    margin-block-start: 0;
+}
+input:focus{
+    outline: 0;
+}
+h2{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+
+/** SIDEBAR */
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    width: 17rem;
+    flex-shrink: 0;
+    flex-grow: 0;
+    height: 100%;
+    width: 17rem;
+    background-color: white;
+}
+.logo{
+    order: 1;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 100% ;
+    height: 60px;
+    background-color: lightskyblue;
+    display: grid;
+    align-items: center;
+    padding-left: 15%;
+    font-size: 17px;
+}
+.redes{
+    order: 2;
+    flex-direction: column;
+    display: flex;
+    z-index: 14;
+    flex-basis:100%;
+    overflow-y: scroll;
+}
+.redes::-webkit-scrollbar{
+    display: none;
+}
+/** Rede Individual */
+@media screen{
+    .rede-individual{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        flex-basis: 50px;
+        background-color: whitesmoke;
+        border-bottom: 1px solid lightblue;
+    }
+    /** MainDiv */
+    @media screen {
+        .rede-individual > .mainDiv > .HoverDiv {
+            flex-basis: 20rem;
+            height: 50px;   
+            position: relative;
+            display: flex;
+            overflow: hidden;
+        }
+        .rede-individual > .mainDiv > .HoverDiv:before {
+            box-sizing: border-box;
+            -webkit-transition: 0.5s ease-in-out;
+            transition: 0.5s ease-in-out;
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: lightblue;
+            -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+        }
+        .rede-individual:hover > .mainDiv > .HoverDiv:before{
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        } 
+        .rede-individual:hover > .mainDiv > .HoverDiv >.NomeRede{
+            font-weight: 500;
+        } 
+        .uselessDiv{
+            display: block;
+            flex-grow: 2;
+            flex-basis: 100%;
+            border:0;
+        }
+        .mainDiv{
+            display: flex;
+            width: 100%;
+            z-index: 10;
+        }
+        .mainDiv > .HoverDiv > .Estado{
+            flex-basis: 3rem;
+            height: 50px;
+            min-width: 50px;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            z-index: 20;
+        }
+        .mainDiv > .HoverDiv > .Estado > div{
+            border-radius: 100px;
+            height: .9rem;
+            width: .9rem;
+            z-index: 21;
+            display: block;
+        }
+        .mainDiv > .HoverDiv > .NomeRede {
+            height: 50px;
+            flex-basis: 20rem;
+            padding-left: .2em;
+            z-index: 20;
+            display: grid;
+            font-size: 1.05rem;
+            font-weight: 400;
+            align-items: center;  
+        }
+        .mainDiv > .opcoesbtn{
+            height: 50px;
+            min-width: 50px;
+            flex-basis: 3rem;
+            display: grid;
+            z-index: 20;
+            align-items: center;
+            justify-items: center;
+            background-color: transparent;
+            transition: background-color .5s ease;
+        }
+        .mainDiv > .opcoesbtn:hover{
+            background-color: lightblue;
+            cursor: pointer;
+        }
+        .mainDiv > .opcoesbtn > button{
+            width: 1rem;
+            height: 1rem;
+            z-index: 21;
+            display:block;
+            background-color: transparent;
+            padding:0;
+            border: 0;
+        }
+        .mainDiv > .opcoesbtn > button > svg{
+            width :100%;
+            height:100%;
+            transition: transform .25s ease-in; 
+        }
+    }
+    /** .Net_Options_Sub_Menu */
+    @media screen{
+        .Net_Options_Sub_Menu{
+            display: none;
+            width: 100%;
+        }
+
+        .Net_Options_Sub_Menu > div{
+            display: flex;
+            width: 100%;
+            height: 50px;
+            background-color: khaki;
+        }
+
+        .Net_Options_Sub_Menu > div > .opcao1 {
+            flex: 1;
+            height: 100%;
+            background-color: red;
+        }
+
+        .Net_Options_Sub_Menu > div > .opcao2 {
+            flex: 1;
+            height: 100%;
+            background-color: green;
+        }
+
+        .Net_Options_Sub_Menu > div > .opcao3 {
+            flex: 1;
+            height: 100%;
+            background-color: blue;
+        }
+    }
+}
+/** .IconsBtn Optionsdiv */
+@media screen {
+    .icon-menu{
+        order:2; 
+        display:flex;
+        flex-basis: 7rem;
+        flex-direction: column;
+    }
+    .icon-btn{
+        order: 1;
+        display:block;
+        background-color: white;
+        flex-basis: 2rem;
+        border: 0;
+        height: 2rem;
+    }
+    .icon-holder{
+        order: 3;
+        display: flex;
+        background-color: lightskyblue;
+        flex-basis: 7rem;
+        align-items: center;
+        justify-content: space-evenly; 
+    }
+    /** Hidden Options-div */
+    @media screen {
+        #options-div{
+            display: none;
+            background-color: lightskyblue;
+            width: 100%;
+            height: 100px;
+        }
+        #options-div > div{
+            display: flex;
+            overflow-x: scroll;
+            background-color: lightskyblue;
+            width: 100%;
+            height: 100%;
+            -webkit-overflow-scrolling: touch;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+        }
+        #options-div > div::-webkit-scrollbar{
+            display: none;
+        }
+        #options-div > div > .bloco{
+            flex-shrink: 0;
+            width: 100%;
+            height: 100%;
+            scroll-snap-align: start;
+        }
+        #options-div > div > #bloco1{
+            background-color: blue;
+        }
+        #options-div > div > #bloco2{
+            background-color: green;
+        }
+        #options-div > div > #bloco3{
+            background-color: red;
+        }
+    }
+}
+
+/** .MainPart e childs */
+@media screen{
+.MainPart{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: grey;
+}
+.MainPart > .upperHeaderDiv{
+    background-color: lightskyblue;
+    height: 60px;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.MainPart > .upperHeaderDiv > div{
+    background-color: transparent;
+    height: 100%;
+    width: 60px;
+    border-left: 2px solid white;
+    cursor: pointer;
+    transition: background-color .1s linear;
+}
+.MainPart > .upperHeaderDiv > div.btnWrapper{
+    display: block;
+}
+.MainPart > .upperHeaderDiv > div:hover{
+    background-color: rgba(255, 255, 255, 0.205);
+}
+.MainPart > .upperHeaderDiv > div > .Button{
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    border-left: 1px solid lightblue;
+}
+.MainPart > .upperHeaderDiv  > .PastaAtual{
+    padding-left: 2.5rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+.MainPart > .FileTable{
+    width: 100%;
+    background-color: rgb(233, 233, 233);
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.MainPart > .FileTable > .Linha,
+.MainPart > .FileTable > .Linha.Header {
+    display: flex;
+    height: 50px;
+    width: 100%;
+}
+.MainPart > .FileTable > .Linha {
+    border-bottom: 1px solid lightskyblue;
+    cursor: pointer;
+}
+
+.MainPart > .FileTable > .Linha {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid lightskyblue;
+    cursor: pointer;
+}
+.MainPart > .FileTable > .Linha > div {
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-size: 16px;
+    background-color: transparent;
+    border-right: 1px solid lightskyblue;
+    transition: all .25s linear;
+}
+.MainPart > .FileTable > .Linha.NotHeader:hover > div {
+    background-color: rgb(188, 213, 228);
+}
+.MainPart > .FileTable > .Linha > div:last-of-type {
+    border: 0;
+}
+.MainPart > .FileTable > .Linha.Header {
+    border-bottom: 2px solid lightskyblue;
+    background-color: lightblue;
+    cursor: pointer;
+}
+.MainPart > .FileTable > .Linha.Header > div {
+    border-right: 2px solid lightskyblue;
+}
+
+.MainPart > .FileTable > .Linha > div.ChkSelecionado{
+    width: 50px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-items: center;
+    padding: 0;
+    
+}
+.MainPart > .FileTable > .Linha > div.iconFicheiro{
+    width: 32.5px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-items: center;
+    padding: 0 0.25rem;
+}
+.MainPart > .FileTable > .Linha > div.iconFicheiro{
+    width: 32.5px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-items: center;
+}
+.MainPart > .FileTable > .Linha > div.iconFicheiro{
+    fill: lightskyblue;
+}
+.MainPart > .FileTable > .Linha > div.NomeFicheiro{
+    flex-grow: 2;
+    flex-shrink: 2;
+    flex-basis: 6rem;
+}
+.MainPart > .FileTable > .Linha > div.NomeFicheiro > p{
+    display: block;
+    width: 120px;
+    text-align: center;
+}
+.MainPart > .FileTable > .Linha > div.TipoFicheiro{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 5rem;
+}
+.MainPart > .FileTable > .Linha > div.TipoFicheiro > p{
+    display: block;
+    width: 30px;
+    text-align: center;
+}
+.MainPart > .FileTable > .Linha > div.Tamanho{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 5rem;
+}
+.MainPart > .FileTable > .Linha > div.Tamanho > p{
+    display: block;
+    width: 63px;
+    text-align: center;
+}
+.MainPart > .FileTable > .Linha > div.DataDeMod{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 6rem;
+}
+.MainPart > .FileTable > .Linha > div.DataDeMod > p{
+    display: block;
+    width: 137px;
+    text-align: center;
+}
+.MainPart > .FileTable > .Linha > div.Autor{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 5rem;
+}
+.MainPart > .FileTable > .Linha > div.Autor > p{
+    display: block;
+    width: 38px;
+    text-align: center;
+}
+.MainPart > .FileTable > .Linha > div.OptionsTogller,
+.MainPart > .FileTable > .Linha > div.OptionsTogller.GoBack{
+    width: 50px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-items: center;
+    padding: 0;
+}
+.MainPart > .FileTable > .Linha > div.OptionsTogller.GoBack > div{
+    width: 100%;
+    height:100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+.MainPart > .FileTable > .Linha > div.OptionsTogller.GoBack > div > svg{
+    width:25px;
+    height: 25px;
+    fill: lightskyblue;
+}
+
+}
+
+/** .Hidden Modal Box */
+@media screen{
+.HiddenModalBox{
+    z-index: 25;
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.HiddenModalBox2 {
+    position: absolute;
+    z-index: 1000000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.295);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+.ModalBox{
+    z-index: 100001;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    width: 800px;
+    height: 600px;
+}
+/** Header da Modal Box */
+@media screen {
+    .ModalBox > .UpperPart{
+        display: flex;
+        width: 100%;
+        height:50px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        background: rgb(5,100,181);
+        background: linear-gradient(28deg, rgba(5,100,181,1) 0%, rgba(2,0,36,1) 20%, rgba(5,100,181,1) 40%, rgba(2,0,36,1) 60%, rgba(5,100,181,1) 80%, rgba(2,0,36,1) 100%);
+        background-size: 1000% 1000%;
+        animation: gradient 20s linear infinite;
+    }
+    @keyframes gradient {
+        0% {
+            background-position: 20% 50%;
+        }
+
+        100% {
+            background-position: 70% 50%;
+        }
+    }
+    .ModalBox > .UpperPart > div{
+        display: grid;
+        align-items: center;
+        justify-items: center;  
+    }
+    .ModalBox > .UpperPart > .icon{
+        height: 100%;
+        width: 50px;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+    .ModalBox > .UpperPart > .TituloJanela{
+        height: 100%;
+        display: grid;
+        padding-left: 1rem;
+        align-items: center;
+        justify-items: center;
+    }
+    .ModalBox > .UpperPart > .CloseButton{
+        display: block;
+        height: 100%;
+        width: 50px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        cursor: pointer;
+        transition: background-color .5s ease;
+    }
+    .ModalBox > .UpperPart > .CloseButton:hover{
+        background-color: red;
+    }
+    .ModalBox > .UpperPart > .CloseButton > div{
+        height: 50px;
+        width: 50px;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
+    .ModalBox > .UpperPart > .CloseButton > div > svg{
+        height: 20px;
+        width: 20px;
+    }
+}
+
+/** MainPart da ModalBox */
+@media screen {
+    .ModalBox > .MainContent{
+        width: 100%;
+        height: 500px;
+        padding: .5rem;
+        background-color: turquoise;
+    }
+}
+/** Parte de Baixo da ModalBox */
+@media screen {
+    .ModalBox > .BottomButtonsContainer{
+        width: 100%;
+        height: 50px;
+        background-color: #f5f6fa;
+        display:flex;
+        border-top: 1px solid black;
+        flex-direction: row-reverse;
+    }
+    .ModalBox > .BottomButtonsContainer > .button{
+        width: 20%;
+        height: 100%;
+        cursor: pointer;
+        border-left: 1px black solid;
+        display: block;
+        transition: background-color .2s linear;
+    }
+    .ModalBox > .BottomButtonsContainer > .button:hover{
+        background-color: #dcdde1;
+    }
+    .ModalBox > .BottomButtonsContainer > .button > div{
+        width:100%;
+        height: 100%;
+        cursor: pointer;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+    }
+    .ModalBox > .BottomButtonsContainer > .button > div > p{
+        cursor: pointer;
+    }
+
+}
+}
+
+/** SPModalBox */
+@media screen{
+.SPModalbox{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    background: rgb(5,100,181);
+    background: linear-gradient(28deg, rgba(5,100,181,1) 0%, rgba(2,0,36,1) 20%, rgba(5,100,181,1) 40%, rgba(2,0,36,1) 60%, rgba(5,100,181,1) 80%, rgba(2,0,36,1) 100%);
+    background-size: 1000% 1000%;
+    animation: gradient 20s linear infinite;
+}
+.Box{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+/** Login */
+@media screen {
+    .SPModalbox > .LoginBox{
+        width: 600px;
+        height: 500px;
+    }
+    .SPModalbox > .LoginBox > .TitleTXT{
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: 100%;
+        height:8rem;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
+    .SPModalbox > .LoginBox > .TitleTXT > h2{
+        font-size: 3rem;
+        font-weight: 400;
+    }
+    .SPModalbox > .LoginBox > Div.TextBox{
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: 100%;
+        height: 5.25rem;
+        padding-top: 0.25rem;
+        padding-bottom:1.75rem;
+        }
+    .SPModalbox > .LoginBox > Div.TextBox > input{
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        background-position: .75rem center;
+        background-size: 1.5rem 1.5rem;
+        background-repeat: no-repeat;
+        padding-left: 3.5rem;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        border-left: 0;
+        border-right: 0; 
+    }
+    .SPModalbox > .LoginBox > Div.TextBox > input.UN{
+        background-image: url("data:image/svg+xml,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%20511.989%20511.989%22%20style%3D%22enable-background%3Anew%200%200%20511.989%20511.989%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cg%3E%0A%09%3Cg%3E%0A%09%09%3Cpath%20d%3D%22M418.406%2C342.014l-3.715-1.204l-73.363-16.537v-37.379c26.819-24.007%2C42.667-58.108%2C42.667-94.894v-74.219%0A%09%09%09C383.995%2C52.73%2C331.265%2C0%2C266.213%2C0h-20.437c-65.051%2C0-117.781%2C52.73-117.781%2C117.781V192c0%2C36.786%2C15.847%2C70.887%2C42.667%2C94.894%0A%09%09%09v37.379L97.298%2C340.81l-3.715%2C1.204c-30.883%2C13.24-50.922%2C43.629-50.922%2C77.229v43.989c0%2C9.76%2C6.623%2C18.275%2C16.083%2C20.677%0A%09%09%09l35.285%2C8.96c106.01%2C25.484%2C217.148%2C25.478%2C323.631%2C0.074l35.585-9.034c9.46-2.402%2C16.083-10.917%2C16.083-20.677v-43.989%0A%09%09%09C469.328%2C385.643%2C449.289%2C355.254%2C418.406%2C342.014z%20M426.661%2C446.639l-19.203%2C4.876c-99.662%2C23.775-203.991%2C23.78-303.193-0.065%0A%09%09%09l-18.938-4.81v-27.397c0-15.944%2C9.179-30.431%2C23.465-37.286l87.893-19.812c9.731-2.193%2C16.642-10.837%2C16.642-20.811v-64.491%0A%09%09%09c0-6.691-3.139-12.994-8.479-17.026c-21.421-16.172-34.187-40.919-34.187-67.817v-74.219c0-41.487%2C33.627-75.115%2C75.115-75.115%0A%09%09%09h20.437c41.487%2C0%2C75.115%2C33.627%2C75.115%2C75.115V192c0%2C26.898-12.767%2C51.645-34.187%2C67.817c-5.34%2C4.032-8.479%2C10.335-8.479%2C17.026%0A%09%09%09v64.491c0%2C9.975%2C6.912%2C18.618%2C16.642%2C20.811l87.893%2C19.812c14.286%2C6.855%2C23.465%2C21.342%2C23.465%2C37.286V446.639z%22%2F%3E%0A%09%3C%2Fg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E");
+    }
+    .SPModalbox > .LoginBox > Div.TextBox > input.PW{
+        background-image: url("data:image/svg+xml,%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%20512%20512%22%20style%3D%22enable-background%3Anew%200%200%20512%20512%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cg%3E%0A%09%3Cg%3E%0A%09%09%3Cg%3E%0A%09%09%09%3Cpath%20d%3D%22M362.667%2C208.114V106.667C362.667%2C47.759%2C314.907%2C0%2C256%2C0S149.333%2C47.759%2C149.333%2C106.667v101.447%0A%09%09%09%09c-39.013%2C31.277-64%2C79.327-64%2C133.219C85.333%2C435.59%2C161.743%2C512%2C256%2C512s170.667-76.41%2C170.667-170.667%0A%09%09%09%09C426.667%2C287.441%2C401.679%2C239.391%2C362.667%2C208.114z%20M192%2C106.667c0-35.343%2C28.657-64%2C64-64s64%2C28.657%2C64%2C64v76.419%0A%09%09%09%09c-14.862-6.016-30.761-10.003-47.358-11.609c-0.156-0.015-0.314-0.027-0.47-0.042c-1.192-0.112-2.386-0.217-3.584-0.304%0A%09%09%09%09c-0.394-0.029-0.789-0.049-1.184-0.075c-0.979-0.065-1.959-0.13-2.942-0.178c-0.687-0.034-1.377-0.053-2.065-0.078%0A%09%09%09%09c-0.71-0.026-1.419-0.06-2.131-0.077c-1.419-0.035-2.84-0.054-4.264-0.054s-2.845%2C0.019-4.264%2C0.054%0A%09%09%09%09c-0.713%2C0.018-1.421%2C0.051-2.131%2C0.077c-0.689%2C0.026-1.378%2C0.045-2.065%2C0.078c-0.984%2C0.048-1.963%2C0.114-2.942%2C0.178%0A%09%09%09%09c-0.394%2C0.026-0.79%2C0.046-1.184%2C0.075c-1.199%2C0.087-2.393%2C0.192-3.584%2C0.304c-0.157%2C0.015-0.314%2C0.026-0.47%2C0.042%0A%09%09%09%09c-16.598%2C1.606-32.497%2C5.593-47.358%2C11.609V106.667z%20M256%2C469.333c-70.693%2C0-128-57.307-128-128%0A%09%09%09%09c0-42.853%2C21.063-80.783%2C53.396-104.015c0.501-0.294%2C0.997-0.606%2C1.486-0.948c17.304-12.085%2C37.172-19.704%2C58.177-22.164%0A%09%09%09%09c0.133-0.016%2C0.267-0.031%2C0.4-0.046c3.01-0.343%2C6.044-0.575%2C9.095-0.704c0.335-0.014%2C0.67-0.027%2C1.006-0.038%0A%09%09%09%09c1.476-0.051%2C2.956-0.085%2C4.44-0.085s2.964%2C0.034%2C4.44%2C0.085c0.336%2C0.011%2C0.671%2C0.024%2C1.006%2C0.038%0A%09%09%09%09c3.052%2C0.129%2C6.086%2C0.361%2C9.096%2C0.704c0.133%2C0.015%2C0.266%2C0.03%2C0.399%2C0.046c21.005%2C2.459%2C40.874%2C10.079%2C58.177%2C22.164%0A%09%09%09%09c0.489%2C0.341%2C0.985%2C0.654%2C1.486%2C0.948C362.938%2C260.55%2C384%2C298.48%2C384%2C341.333C384%2C412.026%2C326.693%2C469.333%2C256%2C469.333z%22%2F%3E%0A%09%09%09%3Cpath%20d%3D%22M256%2C256c-35.355%2C0-64%2C28.645-64%2C64c0%2C27.872%2C17.808%2C51.562%2C42.667%2C60.346v24.987c0%2C11.782%2C9.551%2C21.333%2C21.333%2C21.333%0A%09%09%09%09s21.333-9.551%2C21.333-21.333v-24.987C302.192%2C371.562%2C320%2C347.872%2C320%2C320C320%2C284.645%2C291.355%2C256%2C256%2C256z%20M256%2C341.333%0A%09%09%09%09c-11.791%2C0-21.333-9.542-21.333-21.333s9.542-21.333%2C21.333-21.333s21.333%2C9.542%2C21.333%2C21.333S267.791%2C341.333%2C256%2C341.333z%22%2F%3E%0A%09%09%3C%2Fg%3E%0A%09%3C%2Fg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A");
+    }
+    .SPModalbox > .LoginBox > Div.SecondaryStuff{
+        width: 100%;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 100%;
+    }    
+    .SPModalbox > .LoginBox > Div.wrapperBtn{
+        width: 100%;
+        height:7rem;
+        flex-grow: 0;
+        flex-shrink: 0;
+        display: flex;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: .25rem;
+        padding-bottom: 2.75rem;
+        justify-content: space-around;
+    }    
+    .SPModalbox > .LoginBox > Div.wrapperBtn > .Button{
+        width: 45%;
+        height:100%;
+        cursor: pointer;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        border: 1px solid black;
+    }
+}
+
+/** Register */
+@media screen {
+    .RegisterBox{
+        width: 500px;
+        height:500px;
+    }
+}
+}
+
+@media screen and (min-width:1200px){
+.sidebar {
+    width: 18rem;
+}
+.logo {
+    font-size: 19px;
+}
+/*.MainPart > .FileTable > .Linha > div{
+    padding:0 3vw;
+}
+
+.MainPart > .FileTable > .Linha > div.NomeFicheiro{
+    min-width: calc(120px+6vw);
+}    
+.MainPart > .FileTable > .Linha > div.TipoFicheiro{
+    width: calc(30px+6vw);
+}
+.MainPart > .FileTable > .Linha > div.Tamanho{
+    width: calc(63px+6vw);
+}
+.MainPart > .FileTable > .Linha > div.DataDeMod{
+    width: calc(137px+6vw);
+}
+.MainPart > .FileTable > .Linha > div.Autor{
+    width: calc(38px+6vw);
+}*/
+}
+
+@media screen and (min-width:1599px){
+.sidebar {
+    width: 19rem;
+}
+.logo {
+    font-size: 23px;
+}
+/*.MainPart > .FileTable > .Linha > div{
+    padding:0 4vw;
+}
+.MainPart > .FileTable > .Linha > div.NomeFicheiro{
+    min-width: calc(120px+8vw);
+}    
+.MainPart > .FileTable > .Linha > div.TipoFicheiro{
+    width: calc(30px+8vw);
+}
+.MainPart > .FileTable > .Linha > div.Tamanho{
+    width: calc(63px+8vw);
+}
+.MainPart > .FileTable > .Linha > div.DataDeMod{
+    width: calc(137px+8vw);
+}
+.MainPart > .FileTable > .Linha > div.Autor{
+    width: calc(38px+8vw);
+}*/
+}
+.centrarGrid{
+display: grid;
+align-items: center;
+justify-items: center;
+}
+
+
+/*
+@using APP.ComponentsBck
+@using APP.ComponentsBck.Main
+@using APP.ComponentsBck.Sidebar
+@using APP.ComponentsBck.icons
+@using APP.ComponentsBck.ModalBoxes
+*/
