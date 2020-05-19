@@ -26,7 +26,7 @@ namespace WebWindows.Blazor
         [DllImport("user32.dll")]
         static extern bool SetForegroundWindow(IntPtr hWnd);
 
-        public static void Run<TStartup>(string windowTitle, string hostHtmlPath)
+        public static void Run<TStartup>(string windowTitle, string hostHtmlPath, ServiceCollection MSC)
         {
             //mycode
             if (singleInstanceOpen)
@@ -130,7 +130,7 @@ namespace WebWindows.Blazor
             WebWindow.ShowMessage("Error", $"{ex.Message}\n{ex.StackTrace}");
         }
 
-        private static async Task RunAsync<TStartup>(IPC ipc, CancellationToken appLifetime)
+        private static async Task RunAsync<TStartup>(IPC ipc, CancellationToken appLifetime, ServiceCollection MyServiceCollection)
         {
             var configurationBuilder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
@@ -140,18 +140,17 @@ namespace WebWindows.Blazor
             await PerformHandshakeAsync(ipc);
             AttachJsInterop(ipc, appLifetime);
 
-            var serviceCollection = new ServiceCollection();
-            serviceCollection.AddSingleton<IConfiguration>(configurationBuilder.Build());
-            serviceCollection.AddLogging(configure => configure.AddConsole());
-            serviceCollection.AddSingleton<NavigationManager>(DesktopNavigationManager.Instance);
-            serviceCollection.AddSingleton<IJSRuntime>(DesktopJSRuntime);
-            serviceCollection.AddSingleton<INavigationInterception, DesktopNavigationInterception>();
-            serviceCollection.AddSingleton(WebWindow);
+            MyServiceCollection.AddSingleton<IConfiguration>(configurationBuilder.Build());
+            MyServiceCollection.AddLogging(configure => configure.AddConsole());
+            MyServiceCollection.AddSingleton<NavigationManager>(DesktopNavigationManager.Instance);
+            MyServiceCollection.AddSingleton<IJSRuntime>(DesktopJSRuntime);
+            MyServiceCollection.AddSingleton<INavigationInterception, DesktopNavigationInterception>();
+            MyServiceCollection.AddSingleton(WebWindow);
 
             var startup = new ConventionBasedStartup(Activator.CreateInstance(typeof(TStartup)));
-            startup.ConfigureServices(serviceCollection);
+            startup.ConfigureServices(MyServiceCollection);
 
-            var services = serviceCollection.BuildServiceProvider();
+            var services = MyServiceCollection.BuildServiceProvider();
             var builder = new DesktopApplicationBuilder(services);
             startup.Configure(builder, services);
 
