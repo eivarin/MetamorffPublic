@@ -1,0 +1,14 @@
+    @inherits LayoutComponentBase
+    @inject GlobalVars GB
+    @if (GB.loginInfo.IsLoggedIn)
+    {
+        @Body
+    }
+    else if (GB.CurrAuthPage == "login")
+    {
+        <Login />
+    }
+    else if (GB.CurrAuthPage == "register"){
+        <Register />
+    }
+        

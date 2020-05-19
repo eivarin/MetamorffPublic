@@ -1,0 +1,45 @@
+    @inject NavigationManager NM
+    @inject GlobalVars GB
+    <div class="big-sidebar @MostrarCSS">
+        <div class="big-sidebar-top-bar">
+            <p class="big-sidebar-top-bar-title">@BSSettings.TopBarTitle</p>
+            <div class="big-sidebar-top-bar-filler"></div>
+            <div class="big-sidebar-top-bar-button @BSSettings.TopBarButton">
+                <div @onclick="GoToCreateNet" class="big-sidebar-top-bar-button-hover-box">
+                    <div class="big-sidebar-top-bar-button-icon">
+                        <Plus_Icon />
+                    </div>
+                    <p class="big-sidebar-top-bar-button-text">Add a Net</p>
+                </div>
+            </div>
+        </div>
+        @switch (BSSettings.TipoSidebar)
+        {
+            case 0:
+                break;
+            case 1:
+                <NetsList />
+                break;
+            default:
+                break;
+        }
+    </div>
+    @code{
+        [Parameter]
+        public BigSideBarSettings BSSettings { get; set; }
+
+        private string MostrarCSS { get; set; } = "not-active";
+        protected override void OnInitialized()
+        {
+            if (BSSettings.Mostrar)
+            {
+                MostrarCSS = "active";
+            }
+        }
+
+        private void GoToCreateNet()
+        {
+            GB.PreviousPages.Add("/" + NM.ToBaseRelativePath(NM.Uri));
+            NM.NavigateTo("/AddNet");
+        }
+    }

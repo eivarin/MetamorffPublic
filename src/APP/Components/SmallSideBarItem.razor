@@ -1,0 +1,58 @@
+    @inject NavigationManager NM
+    <div @onclick="GoToPage" class="small-sidebar-item-container">
+        <div class="small-sidebar-item-bar @Ativo"></div>
+        <div class="small-sidebar-item-icon-alignment">
+            <div class="small-sidebar-item-icon @Ativo">
+                @switch (Icon)
+                {
+                    case 0:
+                        <Home_Icon />
+                        Nome = "Home";
+                        LinkName = "/";
+                        break;
+                    case 1:
+                        <Nets_Icon />
+                        Nome = "Nets";
+                        LinkName = "/Nets";
+                        break;
+                    case 2:
+                        <Account_Icon />
+                        Nome = "Account";
+                        LinkName = "/Account";
+                        break;
+                    case 3:
+                        <FAQ_Icon />
+                        Nome = "FAQS";
+                        LinkName = "/FAQ";
+                        break;
+                    case 4:
+                        <Settings_Icon />
+                        Nome = "Settings";
+                        LinkName = "/Settings";
+                        break;
+                    case 5:
+                        <Power_Icon />
+                        Nome = "Power";
+                        LinkName = "/Power";
+                        break;    
+                    default:
+                        break;
+                }
+            </div>
+            <p class="small-sidebar-item-text">@Nome</p>
+        </div>
+    </div>
+
+    @code{
+        [Parameter]
+        public int Icon {get;set;}
+        [Parameter]
+        public string Ativo {get;set;}
+        private string Nome {get;set;}
+        private string LinkName {get;set;}
+
+        private void GoToPage(){
+            NM.NavigateTo(LinkName);
+            StateHasChanged();
+        }
+    }

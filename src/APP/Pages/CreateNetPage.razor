@@ -1,0 +1,26 @@
+    @page "/AddNet/Create"
+    <Sidebar SBProps=SBP/>
+    <SingleBoxTemplate Title="Create a new net" DisplayButton=true ButtonLabel="Create" ButtonAction=CreateNetAction>
+        <CustomTextInput OnChange=NewNetNameHasChanged FieldName="Net Name" PlaceHolder="The name for the new net"/>
+    </SingleBoxTemplate>
+    @code{
+        private SideBarProps SBP = new SideBarProps();
+
+        private string NewNetName{get;set;}
+        protected override void OnInitialized(){
+            SBP.PaginaAtiva = 1;
+            SBP.BigSideBarProps.Mostrar = true;
+            SBP.BigSideBarProps.TipoSidebar = 1;
+            SBP.BigSideBarProps.TopBarTitle = "My Nets";
+            SBP.BigSideBarProps.TopBarButton = "active";
+        }
+
+        void NewNetNameHasChanged(string NewNetName){
+            this.NewNetName = NewNetName;
+        }
+
+        public void CreateNetAction(){
+            
+        }
+        
+    }

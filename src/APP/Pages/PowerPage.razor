@@ -1,0 +1,16 @@
+    @page "/Power"
+
+    <Sidebar SBProps=SBP/>
+
+    <p>Power Page</p>
+
+    @code{
+        private SideBarProps SBP = new SideBarProps();
+        protected override void OnInitialized(){
+            SBP.PaginaAtiva = 5;
+            SBP.BigSideBarProps.Mostrar = false;
+            SBP.BigSideBarProps.TipoSidebar = 0;
+            SBP.BigSideBarProps.TopBarTitle = "";
+            SBP.BigSideBarProps.TopBarButton = "not-active";
+        }
+    }

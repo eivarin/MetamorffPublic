@@ -1,0 +1,84 @@
+    <div class="big-sidebar-nets-solo @OptionsOpenCSS">
+        <div class="big-sidebar-nets-solo-box @NetActiveCSS">
+            <a class="big-sidebar-nets-solo-upperbox">
+                <div class="big-sidebar-nets-solo-upperbox-image"></div>
+                <p class="big-sidebar-nets-solo-upperbox-title">
+                    @Net.NetID
+                </p>
+                <div class="big-sidebar-nets-solo-upperbox-filler"></div>
+                <div href="" class="big-sidebar-nets-solo-upperbox-options-box">
+                    <div @onclick="ToggleOptions" class="big-sidebar-nets-solo-upperbox-options-icon @OptionsOpenCSS">
+                        <Menu_Icon />
+                    </div>
+                </div>
+            </a>                   
+            <div class="big-sidebar-nets-solo-lowerbox @OptionsOpenCSS">
+                <div class="big-sidebar-nets-solo-lowerbox-button not-active">
+                    <div class="big-sidebar-nets-solo-lowerbox-button-icon">
+                        <Pause_Icon />
+                    </div>
+                    <p class="big-sidebar-nets-solo-lowerbox-button-text pause">Pause</p>
+                </div>
+                <div class="big-sidebar-nets-solo-lowerbox-button not-active">
+                    <div class="big-sidebar-nets-solo-lowerbox-button-icon settings">
+                        <Settings_Icon />
+                    </div>
+                    <p class="big-sidebar-nets-solo-lowerbox-button-text settings">Settings</p>
+                </div>
+                <div class="big-sidebar-nets-solo-lowerbox-button not-active">
+                    <div class="big-sidebar-nets-solo-lowerbox-button-icon">
+                        <Cross_Icon />
+                    </div>
+                    <p class="big-sidebar-nets-solo-lowerbox-button-text delete">Delete</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @code{
+        [Parameter]
+        public NetModel Net {get;set;}
+
+        private string NetActiveCSS {get;set;}
+
+        private string OptionsOpenCSS {get;set;}
+
+        protected override void OnInitialized(){
+            OptionsOpenCSS = "not-active";
+            if (Net.ActiveOnUI)
+            {
+                NetActiveCSS = "active";
+            }
+            else
+            {
+                NetActiveCSS = "not-active";
+            }
+        }
+
+        private void ToggleOptions(){
+            if (OptionsOpenCSS == "not-active")
+            {
+                OptionsOpenCSS = "active";
+            }
+            else
+            {
+                OptionsOpenCSS = "not-active";
+            }
+        }
+
+        private void GoToNet(){
+            
+        }
+
+        private void GoToNetOptions(){
+
+        }
+
+        private void PauseNetInTorEngine(){
+
+        }
+
+        private void NetRemove(){
+
+        }
+    }

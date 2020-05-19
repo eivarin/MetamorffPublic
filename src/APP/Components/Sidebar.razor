@@ -1,0 +1,17 @@
+    <div class="sidebar @IsBsEnabled">
+        <SmallSidebar PaginaAtiva=SBProps.PaginaAtiva />
+        <BigSideBar BSSettings=SBProps.BigSideBarProps/>
+    </div>
+    @code{
+        [Parameter]
+        public SideBarProps SBProps {get; set;}
+
+        private string IsBsEnabled {get;set;} = "bs-not-active";
+
+        protected override void OnInitialized(){
+            if (SBProps.BigSideBarProps.Mostrar)
+            {
+                IsBsEnabled = "bs-active";
+            }
+        }
+    }

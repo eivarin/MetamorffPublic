@@ -1,0 +1,16 @@
+    @page "/Settings"
+
+    <Sidebar SBProps=SBP/>
+
+    <p>Settings Page</p>
+
+    @code{
+        private SideBarProps SBP = new SideBarProps();
+        protected override void OnInitialized(){
+            SBP.PaginaAtiva = 4;
+            SBP.BigSideBarProps.Mostrar = true;
+            SBP.BigSideBarProps.TipoSidebar = 0;
+            SBP.BigSideBarProps.TopBarTitle = "Settings";
+            SBP.BigSideBarProps.TopBarButton = "not-active";
+        }
+    }

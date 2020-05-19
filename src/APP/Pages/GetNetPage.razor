@@ -1,0 +1,17 @@
+    @page "/AddNet/Get"
+    <Sidebar SBProps=SBP/>
+    Get
+
+    @code{
+        private SideBarProps SBP = new SideBarProps();
+
+        protected override void OnInitialized(){
+            SBP.PaginaAtiva = 1;
+            SBP.BigSideBarProps.Mostrar = true;
+            SBP.BigSideBarProps.TipoSidebar = 1;
+            SBP.BigSideBarProps.TopBarTitle = "My Nets";
+            SBP.BigSideBarProps.TopBarButton = "active";
+        }
+
+        
+    }

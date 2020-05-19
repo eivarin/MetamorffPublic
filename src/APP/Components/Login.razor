@@ -1,0 +1,63 @@
+
+    <div class="SPModalbox">
+        @inject NavigationManager NavigationManager
+        @inject GlobalVars GB
+        @inject CommonLib.Auth.Authorization auth
+        <div class="LoginBox Box">
+            <div class="TitleTXT">
+                <h2>Metamorff</h2>
+            </div>
+            <div class="TextBox">
+                <input type="text" class="UN" placeholder="Username" @bind-value="@Username">
+            </div>
+            <div class="TextBox">
+                <input type="password" class="PW" placeholder="Password" @bind-value="@Password">
+            </div>
+            <div class="SecondaryStuff">
+                <p class="ErroEntrar" style="display: @DisplayErro;">!Credenciais erradas!</p>
+                <!--<input type="checkbox" class="CheckBox" @bind-value="@EntrarChk" />-->
+            </div>
+            <div class="wrapperBtn">
+
+                <div class="Button" @onclick="IrParaRegisto">Registar</div>
+            </div>
+        </div>
+    </div>
+    @code{
+
+        /*<div class="Button" @onclick="VerEntrar">Login</div>*/
+
+
+        protected override void OnInitialized()
+        {
+        }
+
+        public string Username { get; set; }
+        public string Password { get; set; }
+
+        public bool EntrarChk { get; set; }
+
+        private string DisplayErro = "none";
+        
+        
+        /*private void VerEntrar(){
+            StateHasChanged();
+            if (auth.Login(Username, Password))
+            {
+                GB.loginInfo.IsLoggedIn = true;
+                NavigationManager.NavigateTo("/");
+            }
+            else
+            {
+                DisplayErro = "block";
+            }
+        }*/
+
+        private void IrParaRegisto()
+        {
+            StateHasChanged();
+            GB.CurrAuthPage = "register";
+            NavigationManager.NavigateTo("/");
+        }
+    }
+

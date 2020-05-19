@@ -1,0 +1,19 @@
+    @page "/"
+    @inject NavigationManager NM
+
+    <Sidebar SBProps=SBP/>
+
+    <p>Index Page</p>
+    <p>@NM.ToAbsoluteUri(NM.BaseUri)</p>
+
+
+    @code{
+        private SideBarProps SBP = new SideBarProps();
+        protected override void OnInitialized(){
+            SBP.PaginaAtiva = 0;
+            SBP.BigSideBarProps.Mostrar = false;
+            SBP.BigSideBarProps.TipoSidebar = 0;
+            SBP.BigSideBarProps.TopBarTitle = "";
+            SBP.BigSideBarProps.TopBarButton = "not-active";
+        }
+    }

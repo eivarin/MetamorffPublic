@@ -1,0 +1,24 @@
+    <div class="small-sidebar">
+            @for (int i = 0; i < 5; i-=-1)
+            {
+                if (i == PaginaAtiva)
+                {
+                    <SmallSideBarItem Icon=i Ativo="active"/>
+                }
+                else{
+                    <SmallSideBarItem Icon=i Ativo="not-active"/>
+                }
+            }
+            <div class="small-sidebar-filler"></div>
+            @if (5 == PaginaAtiva)
+            {
+                <SmallSideBarItem Icon=5 Ativo="active"/>
+            }
+            else{
+                <SmallSideBarItem Icon=5 Ativo="not-active"/>
+            }
+    </div>
+    @code{
+        [Parameter]
+        public int PaginaAtiva {get;set;}
+    }

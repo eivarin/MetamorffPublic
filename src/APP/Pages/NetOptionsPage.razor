@@ -1,0 +1,20 @@
+    @page "/NetOptions/{netid}"
+
+    <Sidebar SBProps=SBP/>
+
+    <p>@NetID</p>
+
+    @code{
+        [Parameter]
+        public string NetID {get; set;} = "not working";
+
+        private SideBarProps SBP = new SideBarProps();
+
+        protected override void OnInitialized(){
+            SBP.PaginaAtiva = 1;
+            SBP.BigSideBarProps.Mostrar = true;
+            SBP.BigSideBarProps.TipoSidebar = 1;
+            SBP.BigSideBarProps.TopBarTitle = "My Nets";
+            SBP.BigSideBarProps.TopBarButton = "active";
+        }
+    }

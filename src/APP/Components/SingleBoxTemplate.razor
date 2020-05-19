@@ -1,0 +1,51 @@
+    @inject NavigationManager NM
+    @inject GlobalVars GB
+
+    <div class="SingleBoxForOptions-Container">
+        <div class="SingleBoxForOptions-InnerContainer">
+            <div class="SingleBoxForOptions-Box">
+                <div class="SingleBoxForOptions-TopBar @ColorMode">
+                    <div @onclick="GoBack" class="SingleBoxForOptions-TopBar-GoBackButton">
+                        <LeftArrow_Icon />
+                    </div>
+                    <p class="SingleBoxForOptions-TopBar-Title">
+                        @Title
+                    </p>
+                </div>
+                <div class="SingleBoxForOptions-MainContent">
+                    @ChildContent
+                </div>
+                <div class="SingleBoxForOptions-BottomBar @ColorMode">
+                    @if (DisplayButton)
+                    {
+                        <div @onclick="ButtonAction" class="button">@ButtonLabel</div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    @code{
+        [Parameter]
+        public RenderFragment ChildContent {get;set;}
+
+        [Parameter]
+        public string Title {get;set;} = "Test title";
+
+        [Parameter]
+        public string ColorMode {get;set;} = "normal-color";
+
+        [Parameter]
+        public bool DisplayButton {get;set;} = false;
+
+        [Parameter]
+        public string ButtonLabel {get;set;} = "test save";
+
+        [Parameter]
+        public EventCallback ButtonAction { get; set; }
+
+        private void GoBack(){
+            string previousPath = GB.PreviousPages.Last<string>();
+            GB.PreviousPages.RemoveAt(GB.PreviousPages.LastIndexOf(previousPath));
+            NM.NavigateTo(previousPath);
+        }
+    }

@@ -1,0 +1,50 @@
+    @page "/AddNet"
+    @inject NavigationManager NM
+    @inject GlobalVars GB
+
+    <Sidebar SBProps=SBP/>
+
+    <SingleBoxTemplate Title="Add a net">
+        <div class="SingleBoxForOptions-DoubleButtonsTemplate">
+            <div @onclick="GoToCreateNet" class="SingleBoxForOptions-DoubleButtonsTemplate-button">
+                <div class="SingleBoxForOptions-DoubleButtonsTemplate-Icon">
+                        <AddNet_Icon />
+                </div>
+                <h4 class="SingleBoxForOptions-DoubleButtonsTemplate-Title">Create a Net</h4>
+                <p class="SingleBoxForOptions-DoubleButtonsTemplate-Description">Create a net from zero without any files</p>
+            </div>
+            <div @onclick="GoToGetNet" class="SingleBoxForOptions-DoubleButtonsTemplate-button">
+                <div class="SingleBoxForOptions-DoubleButtonsTemplate-Icon">
+                        <CreateNet_Icon />
+                </div>
+                <h4 class="SingleBoxForOptions-DoubleButtonsTemplate-Title">Get a Net</h4>
+                <p class="SingleBoxForOptions-DoubleButtonsTemplate-Description">Get an existing net from the database</p>
+            </div>
+        </div>
+    </SingleBoxTemplate>
+
+    @code{
+        private SideBarProps SBP = new SideBarProps();
+
+        protected override void OnInitialized(){
+            SBP.PaginaAtiva = 1;
+            SBP.BigSideBarProps.Mostrar = true;
+            SBP.BigSideBarProps.TipoSidebar = 1;
+            SBP.BigSideBarProps.TopBarTitle = "My Nets";
+            SBP.BigSideBarProps.TopBarButton = "active";
+        }
+
+        private void GoToCreateNet(){
+            GB.PreviousPages.Add("/" + NM.ToBaseRelativePath(NM.Uri));
+            NM.NavigateTo("/AddNet/Create");
+        }
+        private void GoToGetNet(){
+            GB.PreviousPages.Add("/" + NM.ToBaseRelativePath(NM.Uri));
+            NM.NavigateTo("/AddNet/Get");
+        }
+        private void GoBack(){
+            string previousPath = GB.PreviousPages.Last<string>();
+            GB.PreviousPages.RemoveAt(GB.PreviousPages.LastIndexOf(previousPath));
+            NM.NavigateTo(previousPath);
+        }
+    }

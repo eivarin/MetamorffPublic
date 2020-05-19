@@ -1,0 +1,19 @@
+    <div class="Text-box">
+        <input type="text" @onclick="@(() => OnChange.InvokeAsync("Hello from ChildComponent"))" id="input" class="Input-text" placeholder=@PlaceHolder>
+        <label for="input" class="Input-label">@FieldName</label>
+    </div>
+    @code {
+
+        [Parameter]
+        public string FieldName {get;set;}
+        [Parameter]
+        public string PlaceHolder {get;set;}
+        [Parameter]
+        public EventCallback<string> OnChange { get; set; }
+
+    }
+
+
+
+
+
