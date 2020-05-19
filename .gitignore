@@ -20,3 +20,7 @@ src/WebWindow.Blazor/obj/
 src/WebWindow.Blazor.JS/bin/
 
 src/WebWindow.Blazor.JS/obj/
+
+src/Metamorff/MonoTorrent/obj/
+
+src/Metamorff/MonoTorrent/bin/
