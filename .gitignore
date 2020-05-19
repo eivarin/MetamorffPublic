@@ -12,3 +12,11 @@ VS2019/APP/bin/
 VS2019/.vs/
 
 Recursos/SpaceInvaderAssets.zip
+
+src/WebWindow.Blazor/bin/
+
+src/WebWindow.Blazor/obj/
+
+src/WebWindow.Blazor.JS/bin/
+
+src/WebWindow.Blazor.JS/obj/
