@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -73,6 +73,7 @@ namespace WebWindows.Blazor
 
             try
             {
+                    WebWindow.SetIconFile("logo.ico");
                 WebWindow.NavigateToUrl(BlazorAppScheme + "://app/");
                 WebWindow.WaitForExit();
             }
