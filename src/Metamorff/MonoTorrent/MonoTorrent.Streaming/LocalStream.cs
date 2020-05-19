@@ -127,7 +127,7 @@ namespace MonoTorrent.Streaming
                 // to be kept open permanently so we can provide data to the user. If there's an issue in the
                 // future (highly likely :p ) then I'll have to augment the various APIs to allow a long-lived
                 // stream to be created, and then use the long-lived stream here.
-                Stream = new FileStream (File.FullPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                Stream = new FileStream (File.FullPath, FileMode.Open, FileAccess.Read, FileShare.Read);
                 Stream.Seek (Position, SeekOrigin.Begin);
             }
 

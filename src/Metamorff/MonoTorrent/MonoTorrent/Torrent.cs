@@ -479,7 +479,9 @@ namespace MonoTorrent
         {
             Check.Path (path);
 
-            using Stream s = new FileStream (path, FileMode.Open, FileAccess.Read, FileShare.Read);
+
+            //
+            using Stream s = new FileStream (path, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.Read);
             return Load (s, path);
         }
 
