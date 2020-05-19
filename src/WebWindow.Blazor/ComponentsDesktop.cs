@@ -103,6 +103,11 @@ namespace WebWindows.Blazor
             }
         }
 
+        private static void WebWindow_LocationChanged(object sender, System.Drawing.Point e)
+        {
+            throw new NotImplementedException();
+        }
+
         private static string GetContentType(string url)
         {
             var ext = Path.GetExtension(url);
