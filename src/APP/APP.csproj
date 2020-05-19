@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+    <RootNamespace>APP</RootNamespace>
+    <AssemblyName>Metamorff UI</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\logo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Made bys.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\logo.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BlazorStyled" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CommonLib\CommonLib.csproj" />
+    <ProjectReference Include="..\WebWindow.Blazor\WebWindow.Blazor.csproj" />
+  </ItemGroup>
+
+
+
+  <ItemGroup>
+    <Content Update="wwwroot\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+
+
+  <ItemGroup>
+    <None Update="logo.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
