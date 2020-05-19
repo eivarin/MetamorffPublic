@@ -1,0 +1,3 @@
+{
+  "ConString": "Data Source=metamorffdb.ccscdo6x7yw4.eu-west-2.rds.amazonaws.com,1433;Initial Catalog=Metamorff;User ID=client;Password=********;Connect Timeout=30;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+}
