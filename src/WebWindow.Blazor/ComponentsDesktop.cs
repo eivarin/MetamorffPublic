@@ -94,6 +94,8 @@ namespace WebWindows.Blazor
                 finally
                 {
                     appLifetimeCts.Cancel();
+                    //my code
+                    DesktopNavigationManager.Instance = new DesktopNavigationManager();
                     singleInstanceOpen = true;
                 }
             }
@@ -102,6 +104,11 @@ namespace WebWindows.Blazor
                 Process process = Process.GetCurrentProcess();
                 SetForegroundWindow(WebWindow.Hwnd);
             }
+        }
+
+        private static void WebWindow_LocationChanged(object sender, System.Drawing.Point e)
+        {
+            throw new NotImplementedException();
         }
 
         private static string GetContentType(string url)

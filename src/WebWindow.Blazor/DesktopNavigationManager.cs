@@ -1,11 +1,11 @@
-﻿using Microsoft.JSInterop;
+using Microsoft.JSInterop;
 using Microsoft.AspNetCore.Components;
 
 namespace WebWindows.Blazor
 {
     internal class DesktopNavigationManager : NavigationManager
     {
-        public static readonly DesktopNavigationManager Instance = new DesktopNavigationManager();
+        public static DesktopNavigationManager Instance = new DesktopNavigationManager();
 
         private static readonly string InteropPrefix = "Blazor._internal.navigationManager.";
         private static readonly string InteropNavigateTo = InteropPrefix + "navigateTo";
