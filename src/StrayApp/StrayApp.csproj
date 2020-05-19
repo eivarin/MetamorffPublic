@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+    <AssemblyName>Metamorff BG</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="CustomApplicationContext.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\APP\APP.csproj" />
+    <ProjectReference Include="..\CommonLib\CommonLib.csproj" />
+    <ProjectReference Include="..\WebWindow.Blazor\WebWindow.Blazor.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="logo.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
