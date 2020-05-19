@@ -17,6 +17,10 @@ namespace WebWindows.Blazor
 {
     public static class ComponentsDesktop
     {
+        private const int SW_MAXIMIZE = 3;
+        [DllImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
         internal static string InitialUriAbsolute { get; private set; }
         internal static string BaseUriAbsolute { get; private set; }
         internal static DesktopJSRuntime DesktopJSRuntime { get; private set; }
@@ -64,6 +68,7 @@ namespace WebWindows.Blazor
                     });
                 });
 
+                ShowWindow(WebWindow.Hwnd, SW_MAXIMIZE);
                 CancellationTokenSource appLifetimeCts = new CancellationTokenSource();
                 Task.Factory.StartNew(async () =>
                 {
