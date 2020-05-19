@@ -25,7 +25,8 @@ namespace WebWindows.Blazor
         internal static string BaseUriAbsolute { get; private set; }
         internal static DesktopJSRuntime DesktopJSRuntime { get; private set; }
         internal static DesktopRenderer DesktopRenderer { get; private set; }
-        internal static WebWindow WebWindow { get; private set; }
+        public static WebWindow WebWindow { get; private set; }
+        //mycode
         private static bool singleInstanceOpen = true;
         [DllImport("user32.dll")]
         static extern bool SetForegroundWindow(IntPtr hWnd);
@@ -101,11 +102,6 @@ namespace WebWindows.Blazor
                 Process process = Process.GetCurrentProcess();
                 SetForegroundWindow(WebWindow.Hwnd);
             }
-        }
-
-        private static void WebWindow_LocationChanged(object sender, System.Drawing.Point e)
-        {
-            throw new NotImplementedException();
         }
 
         private static string GetContentType(string url)
